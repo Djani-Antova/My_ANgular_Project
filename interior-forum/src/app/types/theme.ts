@@ -6,6 +6,7 @@ export interface Theme {
     posts: any | string[] | Post[],
     _id: string,
     themeName: string,
+    // imageUrl: string - TODO check if I want it
     userId: UserId,
     created_at: string,
     updatedAt: string,
