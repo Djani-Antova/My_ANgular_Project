@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ThemesModule } from './features/themes/themes.module';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ThemesModule } from './features/themes/themes.module';
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    ThemesModule
+    ThemesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
