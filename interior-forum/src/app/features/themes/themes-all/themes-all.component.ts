@@ -11,7 +11,7 @@ export class ThemesAllComponent implements OnInit {
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
-    this.api.getThemes().subscribe(themes => { //getThemes() is a method that returns observable => we subscribe
+    this.api.getThemes().subscribe((themes) => { //getThemes() is a method that returns observable => so we subscribe
       console.log(themes);
       
     })          
