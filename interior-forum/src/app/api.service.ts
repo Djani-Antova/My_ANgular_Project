@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,15 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getThemes() {}
+  // const { apiUrl } = environment;
+  // return this.http.get<Theme[]>(`${apiUrl}/themes`);
+
+  getPosts() {
+    // const { apiUrl } = environment;
+    // return this.http.get<Post[]>(`${apiUrl}/posts`);
+  }
+
 }
