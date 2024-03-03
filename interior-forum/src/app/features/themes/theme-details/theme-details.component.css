@@ -1,0 +1,56 @@
+.comment-section {
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f0f8ff;
+  }
+  
+  .comment-header,
+  .comment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-body {
+    display: flex;
+    align-items: center;
+  }
+  
+  .comment-body .avatar {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+    border-radius: 50%; /* Circular avatar */
+  }
+  
+  .comment-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 5px;
+  }
+  
+  .comment-footer i {
+    font-size: 24px; /* Adjust icon size as needed */
+    color: #1c7656; /* Adjust the color to match your theme */
+    margin-right: 5px; /* Space between icon and like count */
+  }
+  
+  .comment-footer span {
+    font-size: 16px; /* Adjust text size as needed */
+    color: #000; /* Adjust the color to match your theme */
+  }
+
+  .avatar {
+    font-size: 50px; /* Adjust the size as needed */
+    color: #4a6d94; /* Lighter shade for a paler look */
+    margin-right: 10px;
+  }
+  
+  
+  
