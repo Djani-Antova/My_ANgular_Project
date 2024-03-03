@@ -16,11 +16,11 @@ export class ApiService {
     return this.http.get<Theme[]>(`${apiUrl}/themes`);
   }
 
-  getLastThemes(limit?: number) {
-    const { apiUrl } = environment;
-    const limitCount = limit ? `?limit=${limit}` : '';
-    return this.http.get<Theme[]>(`${apiUrl}/themes${limitCount}`);
-  }
+  // getLastThemes(limit?: number) {    // Rest-api do not support limit for themes
+  //   const { apiUrl } = environment;
+  //   const limitCount = limit ? `?limit=${limit}` : '';
+  //   return this.http.get<Theme[]>(`${apiUrl}/themes${limitCount}`);
+  // }
 
   postComment(postText: string, themeId: string) {
     return this.http.post<Post>(`/api/themes/${themeId}`, { postText })
