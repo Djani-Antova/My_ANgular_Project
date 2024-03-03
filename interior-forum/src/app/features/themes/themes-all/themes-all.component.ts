@@ -9,7 +9,6 @@ import { Theme } from 'src/app/types/theme';
 })
 export class ThemesAllComponent implements OnInit {
   themesList: Theme[] = [];
-  // isLoading: boolean = true; TODO if needed isLoading
   // subscription!: Subscription; - TODO if needed subscription
   errMessage!: string; 
 
