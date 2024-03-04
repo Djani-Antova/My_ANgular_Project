@@ -1,1 +1,54 @@
-<p>themes-limit works!</p>
+<section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12 mx-auto">
+                <h2 class="text-white text-center">Discover. Learn. Enjoy</h2>
+                <h6 class="text-center">platform for trending IT skills</h6>
+                <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="bi-search"></i>
+                        </span>
+                        <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Angular, QA, Terraform, React ..." aria-label="Search">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                    <a href="topics-detail.html">                     
+                        <img src="assets/images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="custom-block custom-block-overlay">
+                    <img src="assets/images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+                    <div class="custom-block-overlay-text d-flex flex-column h-100 justify-content-end">
+                        <div>
+                            <h3 class="text-white mb-2">What do you think?</h3>
+                            
+                            <p class="text-white mb-2 latest-topics">Latest topics</p>
+                            <br />                   
+                            <p class="text-white" *ngFor="let theme of themesLimitList">{{theme.themeName}}</p>
+                            <br />
+                            <button type="button" class="btn btn-primary">Go to All Topics</button>
+                        </div>
+                     
+                    </div>
+                    
+                    <div class="section-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
