@@ -1,0 +1,26 @@
+.btn-primary {
+    background: linear-gradient(to right, #a9e6df, #267c9b, #a9e6df);
+    color: white; /* Text color */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 0.75rem; /* Smaller font size (text-xs in Tailwind) */
+    font-weight: medium; /* Medium font weight */
+    padding: 0.625rem 1.5rem; /* Padding (pt-2.5 and px-6 in Tailwind) */
+    border: none; /* No border */
+    border-radius: 0.375rem; /* Rounded corners (rounded in Tailwind) */
+    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    transition: box-shadow 0.15s ease-in-out; /* Smooth transition for shadow */
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 8px 9px -4px rgba(0, 0, 0, 0.1), 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-primary:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 8px 9px -4px rgba(0, 0, 0, 0.1), 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-primary:active {
+    box-shadow: 0 8px 9px -4px rgba(0, 0, 0, 0.1), 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  }
+  
