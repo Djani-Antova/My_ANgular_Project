@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'interior-forum'`, () => {
+  it(`should have as title 'topic-forum'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('interior-forum');
+    expect(app.title).toEqual('topic-forum');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('interior-forum app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('topic-forum app is running!');
   });
 });
