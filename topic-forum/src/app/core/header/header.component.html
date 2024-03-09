@@ -9,7 +9,8 @@
             <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
         </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -36,23 +37,35 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                    <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
 
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item active" href="topics-listing.html">Topics Listing</a></li>
+                        <li>
+                            <a class="dropdown-item active" href="topics-listing.html">Topics Listing</a>
+                        </li>
 
-                        <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                        <li>
+                            <a class="dropdown-item" href="contact.html">Contact Form</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
 
-            <div  class="d-none d-lg-block" *ngIf="!isLoggedIn">
-                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+            <!-- When the user is not logged in, show only the login icon -->
+            <div class="d-none d-lg-block" *ngIf="!isLoggedIn">
+                <a href="#login" class="navbar-icon bi-person smoothscroll"></a>
             </div>
+
+            <!-- When the user is logged in, show profile and logout icons -->
+            <div class="d-none d-lg-block" *ngIf="isLoggedIn">
+                <a href="#profile" class="navbar-icon bi-person-circle smoothscroll" style="margin-right: 8px;"></a>
+                <a href="#logout" class="navbar-icon bi-box-arrow-right smoothscroll"></a>
+            </div>
+            
         </div>
     </div>
 </nav>
-
 
 <header class="site-header d-flex flex-column justify-content-center align-items-center">
     <!-- <div class="container">
