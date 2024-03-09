@@ -10,11 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './features/not-found/not-found.component'
 import { HomeComponent } from './features/home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
