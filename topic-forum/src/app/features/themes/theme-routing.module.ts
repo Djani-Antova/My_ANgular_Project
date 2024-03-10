@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { ThemesAllComponent } from "./themes-all/themes-all.component";
 import { ThemeDetailsComponent } from "./theme-details/theme-details.component";
+import { ThemeAddComponent } from "./theme-add/theme-add.component";
 
 const routes: Routes = [
     {
@@ -18,7 +19,11 @@ const routes: Routes = [
             }
         ]
     },
-
+    {
+        path: 'add-theme',
+        component: ThemeAddComponent,
+        // canActivate: [AuthActivate]
+    },
 ];
 
 @NgModule({

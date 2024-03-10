@@ -4,6 +4,7 @@ import { ThemesAllComponent } from './themes-all/themes-all.component';
 import { ThemeDetailsComponent } from './theme-details/theme-details.component';
 import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
 import { ThemeRoutingModule } from './theme-routing.module';
+import { ThemeAddComponent } from './theme-add/theme-add.component';
 
 
 
@@ -11,7 +12,8 @@ import { ThemeRoutingModule } from './theme-routing.module';
   declarations: [
     ThemesAllComponent,
     ThemeDetailsComponent,
-    ThemesLimitComponent
+    ThemesLimitComponent,
+    ThemeAddComponent
   ],
   imports: [
     CommonModule, ThemeRoutingModule

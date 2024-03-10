@@ -25,7 +25,7 @@
                 </li>
                  <!-- Create new theme ONLY FOR Loggedin user-->   
                 <li class="nav-item">
-                    <a class="nav-link click-scroll"  routerLink="/add-theme" >Create Topic</a>
+                    <a class="nav-link click-scroll"  routerLink="/add-theme" *ngIf="isLoggedIn">Create Topic</a>
                 </li>
 
                 <li class="nav-item">
