@@ -1,56 +1,94 @@
-.comment-section {
-    border: 1px solid #000;
-    border-radius: 6px;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #f0f8ff;
-  }
-  
-  .comment-header,
-  .comment-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px dashed #000;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .comment-body {
-    display: flex;
-    align-items: center;
-  }
-  
-  .comment-body .avatar {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    margin-right: 10px;
-    border-radius: 50%; /* Circular avatar */
-  }
-  
-  .comment-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-top: 5px;
-  }
-  
-  .comment-footer i {
-    font-size: 24px; /* Adjust icon size as needed */
-    color: #1c7656; /* Adjust the color to match your theme */
-    margin-right: 5px; /* Space between icon and like count */
-  }
-  
-  .comment-footer span {
-    font-size: 16px; /* Adjust text size as needed */
-    color: #000; /* Adjust the color to match your theme */
-  }
+.topics-detail-section.section-padding {
+  padding: 20px 0;
+}
 
-  .avatar {
-    font-size: 50px; /* Adjust the size as needed */
-    color: #4a6d94; /* Lighter shade for a paler look */
-    margin-right: 10px;
-  }
-  
-  
-  
+.container {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.4);
+}
+
+.comment-section {
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f0f8ff;
+  min-height: 160px; /* Adjust based on your content */
+}
+
+.comment-header,
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.comment-body {
+  display: flex;
+  align-items: center;
+}
+
+.comment-body .avatar,
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #4a6d94; /* Adjust the color as needed */
+}
+
+.comment-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 5px;
+}
+
+.comment-footer i {
+  font-size: 24px;
+  color: #6495c8; /* Adjust the color to match your theme */
+  margin-right: 5px;
+}
+
+.comment-footer span {
+  font-size: 16px;
+  color: #000;
+}
+
+.user-comment-container {
+  margin-top: 40px; /* Additional space before the user comment section */
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #a9e6df, #267c9b, #a9e6df);
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: medium;
+  padding: 0.625rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.15s ease-in-out;  
+}
+
+.comment-placeholder {
+  width: 100%; /* Ensures the textarea spans the full width of its container */
+  margin-top: 10px; /* Adds some space above the textarea */
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  height: 160px; /* Adjust the height as needed */
+}
+
+.submit-comment-button {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  margin-top: 20px; /* Adds some space above the button */
+}
