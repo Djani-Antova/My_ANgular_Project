@@ -54,13 +54,13 @@
 
             <!-- When the user is not logged in, show only the login icon -->
             <div class="d-none d-lg-block" *ngIf="!isLoggedIn">
-                <a href="#login" class="navbar-icon bi-person smoothscroll"></a>
+                <a routerLink="/login" class="navbar-icon bi-person smoothscroll"></a>
             </div>
 
             <!-- When the user is logged in, show profile and logout icons -->
             <div class="d-none d-lg-block" *ngIf="isLoggedIn">
-                <a href="#profile" class="navbar-icon bi-person-circle smoothscroll" style="margin-right: 8px;"></a>
-                <a href="#logout" class="navbar-icon bi-box-arrow-right smoothscroll"></a>
+                <a routerLink="/profile" class="navbar-icon bi-person-circle smoothscroll" style="margin-right: 8px;"></a>
+                <a routerLink="/logout" class="navbar-icon bi-box-arrow-right smoothscroll"></a>
             </div>
             
         </div>
