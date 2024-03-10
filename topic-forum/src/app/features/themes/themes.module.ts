@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ThemesAllComponent } from './themes-all/themes-all.component';
 import { ThemeDetailsComponent } from './theme-details/theme-details.component';
 import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
+import { ThemeRoutingModule } from './theme-routing.module';
 
 
 
@@ -13,7 +14,7 @@ import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
     ThemesLimitComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, ThemeRoutingModule
   ],
   exports: [
     ThemesAllComponent,
