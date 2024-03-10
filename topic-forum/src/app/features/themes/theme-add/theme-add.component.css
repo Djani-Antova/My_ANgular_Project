@@ -34,6 +34,7 @@
     background-color: #f0f8ff; /* Light blue background for container */
     padding: 20px; /* Padding inside the container */
     border-radius: 6px; /* Rounded corners for the container */
-    border: 1px solid #000; /* Border to match the comment sections */
+    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.4);
   }
+  
   
