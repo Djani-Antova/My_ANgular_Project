@@ -9,6 +9,7 @@ import { ThemesModule } from './features/themes/themes.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './features/not-found/not-found.component'
 import { HomeComponent } from './features/home/home.component';
+import { UserModule } from './features/user/user.module';
 
 
 @NgModule({
@@ -20,11 +21,12 @@ import { HomeComponent } from './features/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     SharedModule,
     ThemesModule,
-    HttpClientModule
+    HttpClientModule,
+    UserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
