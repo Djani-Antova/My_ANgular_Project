@@ -26,6 +26,7 @@ import { UserModule } from './features/user/user.module';
     ThemesModule,
     HttpClientModule,
     UserModule,
+    ThemesModule,
     AppRoutingModule,
   ],
   providers: [],
