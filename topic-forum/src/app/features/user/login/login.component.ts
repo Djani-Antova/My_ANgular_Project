@@ -7,15 +7,6 @@ import { Component } from '@angular/core';
 
 })
 export class LoginComponent {
-  rightPanelActive = false;
- 
-  activateRightPanel() {
-    this.rightPanelActive = true;
-  }
- 
-  deactivateRightPanel() {
-    this.rightPanelActive = false;
-  }
 
 
 }
