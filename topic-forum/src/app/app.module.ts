@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './features/not-found/not-found.component'
 import { HomeComponent } from './features/home/home.component';
 import { UserModule } from './features/user/user.module';
+import { HowWorksComponent } from './features/how-works/how-works.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { UserModule } from './features/user/user.module';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
+    HowWorksComponent,
 
   ],
   imports: [
