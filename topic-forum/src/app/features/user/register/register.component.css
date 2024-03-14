@@ -50,7 +50,7 @@ form:after {
 	position: relative;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
-	width: 400px;
+	width: 600px;
 }
 #content h1 {
 	color: #7E7E7E;
@@ -185,7 +185,7 @@ form:after {
 	float: left;
 	font: bold 20px Helvetica, Arial, sans-serif;
 	height: 35px;
-	margin: 20px 0 35px 35px;
+	margin: 20px 0 35px 53px;
 	position: relative;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 	width: 120px;
@@ -203,7 +203,7 @@ form:after {
 	color: #004a80;
     float: right;
     font-size: 12px;
-    margin: 30px 15px 0 0;
+    margin: 30px 55px 0 0;
     text-decoration: underline;
 }
 .button {
