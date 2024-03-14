@@ -17,7 +17,7 @@ export class ThemesLimitComponent implements OnInit {
   ngOnInit(): void {
     this.api.getThemes().subscribe({
       next: (themes) => {
-        this.themesLimitList = themes.slice(0, 3); // Take only the first 3 themes
+        this.themesLimitList = themes.slice( -3); // Takes only the last 3 themes
         console.log('Limited themes to display:', this.themesLimitList); // Log limited themes
       },
       error: (err) => {
