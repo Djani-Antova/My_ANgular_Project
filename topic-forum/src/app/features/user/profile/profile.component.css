@@ -1,118 +1,305 @@
-body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-}
-.emp-profile{
-    padding: 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 0.5rem;
-    background: #fff;
-}
-.profile-img{
-    text-align: center;
-}
-.profile-img img{
-    width: 70%;
-    height: 100%;
-}
-.profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: -20%;
-    width: 70%;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background: #212529b8;
-}
-.profile-img .file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
-.profile-head h5{
-    color: #333;
-}
-.profile-head h6{
-    color: #0062cc;
-}
-.profile-edit-btn{
-    border: none;
-    border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
-    cursor: pointer;
-}
-.proile-rating{
-    font-size: 12px;
-    color: #818182;
-    margin-top: 5%;
-}
-.proile-rating span{
-    color: #495057;
-    font-size: 15px;
-    font-weight: 600;
-}
-.profile-head .nav-tabs{
-    margin-bottom:5%;
-}
-.profile-head .nav-tabs .nav-link{
-    font-weight:600;
-    border: none;
-}
-.profile-head .nav-tabs .nav-link.active{
-    border: none;
-    border-bottom:2px solid #0062cc;
-}
-.profile-work{
-    padding: 14%;
-    margin-top: -15%;
-}
-.profile-work p{
-    font-size: 12px;
-    color: #818182;
-    font-weight: 600;
-    margin-top: 10%;
-}
-.profile-work a{
-    text-decoration: none;
-    color: #495057;
-    font-weight: 600;
-    font-size: 14px;
-}
-.profile-work ul{
-    list-style: none;
-}
-.profile-tab label{
-    font-weight: 600;
-}
-.profile-tab p{
-    font-weight: 600;
-    color: #0062cc;
-}
-.btn-primary {
-    background: linear-gradient(to right, #a9e6df, #267c9b, #a9e6df);
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: medium;
-    padding: 0.625rem 1.5rem;
-    border: none;
-    border-radius: 0.375rem;
-    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.15s ease-in-out;  
-  }
-  .btn-primary :hover {
-    background: #267c9b;
-  }
 
-  .container {
-    background-color: #f0f8ff; /* Light blue background for container */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 6px; /* Rounded corners for the container */
-    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.4);
-  }
-  
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ecf0f3;
+ 
+}
+
+.wrapper,
+.wrapper .img-area,
+.social-icons a,
+.buttons button{
+  background: #ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff,
+               3px 3px 5px #dedee0;
+}
+
+.wrapper{
+  position: relative;
+  width: 400px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.wrapper .icon{
+  font-size: 17px;
+  color: #31344b;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.7;
+  top: 15px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.wrapper .icon i{
+  position: relative;
+  z-index: 9;
+}
+
+.wrapper .img-area{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  margin-bottom: 20px
+}
+
+.img-area .inner-area{
+  height: calc(100% - 25px);
+  width: calc(100% - 25px);
+  border-radius: 50%;
+}
+
+.inner-area img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.wrapper .name{
+  font-size: 23px;
+  font-weight: 500;
+  color: #31344b;
+  margin: 10px 0 5px 0;
+}
+
+.wrapper .about{
+  color: #44476a;
+  font-weight: 400;
+  font-size: 16px;
+
+}
+.read {
+    margin-bottom: 20px;
+}
+
+.wrapper .social-icons{
+  margin: 15px 0 25px 0;
+}
+
+.social-icons a{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.social-icons a:hover::before,
+.wrapper .icon:hover::before,
+.buttons button:hover:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+  box-shadow: inset -3px -3px 7px #ffffff,
+              inset 3px 3px 5px #ceced1;
+}
+
+.buttons button:hover:before{
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.social-icons a i{
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+
+
+.wrapper .buttons{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.buttons button{
+  position: relative;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  color: #31344b;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.buttons button:first-child{
+  margin-right: 10px;
+}
+
+.buttons button:last-child{
+  margin-left: 10px;
+}
+
+.wrapper .social-share{
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 5px;
+  justify-content: space-between;
+}
+
+.social-share .row{
+  color: #31344b;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+}
+
+.social-share .row::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: #e0e6eb;
+  margin-left: -25px;
+}
+
+.row:first-child::before{
+  background: none;
+}
+
+.social-share .row i.icon-2{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  color: #31344b;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.row:nth-child(1):hover i.fa-heart,
+.row:nth-child(2):hover i.fa-comment{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.editable input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #31344b; /* Underline style */
+  box-shadow: none; /* Removing box-shadow if any */
+  margin-top: 5px; /* Adding some spacing */
+  font-size: 1rem; /* Adjust to match your design */
+  color: #31344b; /* Text color */
+  width: calc(100% - 20px); /* Full width minus label and padding */
+}
+
+.editable input:focus {
+  outline: none;
+  border-bottom-color: #00bcd4; /* Highlight color when focused */
+}
+
+/* Style for label if needed */
+.editable label {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #31344b;
+}
+
+/* Adjust buttons to fit the editable mode */
+.buttons button {
+  background: #ecf0f3;
+  color: #31344b;
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+}
+
+.wrapper .about.editable {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Add space between rows */
+}
+
+.wrapper .about.editable label {
+  margin-right: 10px;
+  font-weight: 600;
+  color: #31344b;
+}
+
+.wrapper .about.editable input {
+  flex: 1; /* Take up remaining space */
+  padding: 8px;
+  border: 1px solid #ced4da; /* Example border, adjust as needed */
+  border-radius: 4px;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-left: 10px; /* Ensure some space between the label and input */
+}
+
+/* Adjust the focus styles for input fields */
+.wrapper .about.editable input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Style for inputs in normal state */
+.wrapper .about.editable input {
+  background: #f3f4f6; /* Light grey background */
+  border: 1px solid #ced4da; /* Example border, adjust as needed */
+  border-radius: 4px;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px;
+  margin-left: 10px; /* Ensure some space between the label and input */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Style for inputs when focused */
+.wrapper .about.editable input:focus {
+  outline: none;
+  border-color: #80bdff;
+  background: #ffffff; /* Whiter background when focused */
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
