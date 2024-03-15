@@ -29,7 +29,7 @@ body{
 .wrapper{
   position: relative;
   width: 400px;
-  padding: 30px;
+  padding: 60px;
   border-radius: 10px;
   display: flex;
   align-items: center;
