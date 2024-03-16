@@ -148,13 +148,13 @@ form:after {
 }
 #content form input[type="text"]:focus,
 #content form input[type="password"]:focus {
-	-webkit-box-shadow: 0 0 2px #ed1c24 inset;
-	-moz-box-shadow: 0 0 2px #ed1c24 inset;
-	-ms-box-shadow: 0 0 2px #ed1c24 inset;
-	-o-box-shadow: 0 0 2px #ed1c24 inset;
-	box-shadow: 0 0 2px #ed1c24 inset;
+	-webkit-box-shadow: 0 0 2px #1cedae inset;
+	-moz-box-shadow: 0 0 2px #1cedae inset;
+	-ms-box-shadow: 0 0 2px #1cedae inset;
+	-o-box-shadow: 0 0 2px #1cedae inset;
+	box-shadow: 0 0 2px #1cedae inset;
 	background-color: #fff;
-	border: 1px solid #ed1c24;
+	border: 1px solid #1cedae;
 	outline: none;
 }
 #email { background-position: 4px 5px !important }
