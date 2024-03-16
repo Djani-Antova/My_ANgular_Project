@@ -1,1 +1,1 @@
-export const ALLOWED_DOMAINS_FOR_EMAIL = ["bg", "com"];
+export const DOMAINS_FOR_EMAIL = ["bg", "com"];
