@@ -1,23 +1,48 @@
-<body>
+
   <div class="container">
     <section id="content">
-      <form action="">
+      <form [formGroup]="form" (ngSubmit)="login()">
+   
         <h1>Login Form</h1>
         <div>
-          <input type="text" placeholder="Email" required="" id="email" />
+          <input 
+          type="text" 
+          name="email"
+          id="email" 
+          placeholder="Email" 
+          formControlName="email"
+          />
         </div>
+        <ng-container *ngIf="form.get('email')?.touched">
+          <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+            Email is required!
+          </p>
+          <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">
+            Email is not valid!
+          </p>
+        </ng-container>
         <div>
           <input
             type="password"
-            placeholder="Password"
-            required=""
+            name="password"
             id="password"
+            placeholder="Password"
+            formControlName="password"
           />
         </div>
+        <ng-container *ngIf="form.get('password')?.touched">
+          <p class="error" *ngIf="form.get('password')?.errors?.['required']">
+            Password is required!
+          </p>
+          <p class="error" *ngIf="form.get('password')?.errors?.['minlength']">
+            Password must be at least 5 characters long.
+          </p>
+        </ng-container>
         <div>
-          <input type="submit" value="Log in" />
-          <a href="/register">Don't have an account?</a>
+          <button   [disabled]="form.invalid" 
+          class="btn-primary">Log in</button>
         </div>
+        <p><a href="/register">Don't have an account?</a></p>
       </form>
       <!-- form -->
       <div class="button">
@@ -28,4 +53,4 @@
     <!-- content -->
   </div>
   <!-- container -->
-</body>
+
