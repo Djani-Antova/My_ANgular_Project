@@ -18,7 +18,7 @@ export class ThemesLimitComponent implements OnInit {
     this.api.getThemes().subscribe({
       next: (themes) => {
         this.themesLimitList = themes.slice( -3); // Takes only the last 3 themes
-        console.log('Limited themes to display:', this.themesLimitList); // Log limited themes
+        // console.log('Limited themes to display:', this.themesLimitList);  Log limited themes
       },
       error: (err) => {
         this.errMessage = err.message || 'An error occurred while fetching themes.';
