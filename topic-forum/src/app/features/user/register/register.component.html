@@ -1,4 +1,4 @@
-<body>
+
   <div class="container">
     <section id="content">
       <form [formGroup]="form" (ngSubmit)="register()">
@@ -7,7 +7,6 @@
         <!-- username -->
         <div>
           <input
-          class="input-error"
             type="text"
             name="username"
             id="username"
@@ -23,10 +22,11 @@
       <!-- email -->
         <div>
           <input
+    
             type="text"
             name="email"
             id="email"
-            placeholder="john.doe@gmail.com"
+            placeholder="Email"
             formControlName="email"
           />
         </div>
@@ -89,4 +89,4 @@
     <!-- content -->
   </div>
   <!-- container -->
-</body>
+
