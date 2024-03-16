@@ -1,39 +1,84 @@
 <body>
   <div class="container">
     <section id="content">
-      <form action="">
+      <form [formGroup]="form" (ngSubmit)="register()">
         <h1>Registration Form</h1>
 
-        <div>
-          <input type="text" placeholder="Username" required="" id="username" />
-        </div>
-
-        <div>
-          <input type="text" placeholder="Email" required="" id="email" />
-        </div>
-
+        <!-- username -->
         <div>
           <input
-            type="password"
-            placeholder="Password"
-            required=""
-            id="password"
+          class="input-error"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            formControlName="username"
           />
         </div>
+        <ng-container *ngIf="form.get('username')?.touched">
+          <p class="error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
+          <p class="error" *ngIf="form.get('username')?.errors?.['minlength']"> Username must be at least 5 characters!</p>
+        </ng-container>
 
+      <!-- email -->
         <div>
           <input
-            type="password"
-            placeholder="Confirm Password"
-            required=""
-            id="repass"
+            type="text"
+            name="email"
+            id="email"
+            placeholder="john.doe@gmail.com"
+            formControlName="email"
           />
         </div>
+       
+        <ng-container *ngIf="form.get('email')?.touched">
+          <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+            Email is required!
+          </p>
+          <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">
+            Email is not valid!
+          </p>
+        </ng-container>
 
-        <div>
-          <input type="submit" value="Register" />
-          <a href="/login">Already have an account?</a>
+        <ng-container formGroupName="passGroup">
+          <!-- Password -->
+          <div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              formControlName="password"
+            />
+          </div>
+
+          <!-- rePassword -->
+          <div>
+            <input
+              type="password"
+              name="rePassword"
+              id="rePassword"
+              placeholder="Confirm password"
+              formControlName="rePassword"
+            />
+          </div>
+          <ng-container *ngIf="passGroup?.get('rePassword')?.touched">
+            <p
+              class="error"
+              *ngIf="passGroup?.errors?.['matchPasswordsValidator'] || 
+              passGroup?.get('rePassword')?.errors?.['required']"
+            >
+              Repeat Password does not match password!
+            </p>
+          </ng-container>
+        </ng-container>
+
+
+        <div>       
+          <button  [disabled]="form.invalid"
+          class="btn-primary">Register</button>
         </div>
+        <p><a href="/login">Already have an account?</a></p>
       </form>
       <!-- form -->
       <div class="button">
