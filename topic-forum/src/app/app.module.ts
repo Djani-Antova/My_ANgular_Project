@@ -11,6 +11,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component'
 import { HomeComponent } from './features/home/home.component';
 import { UserModule } from './features/user/user.module';
 import { HowWorksComponent } from './features/how-works/how-works.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,8 @@ import { HowWorksComponent } from './features/how-works/how-works.component';
     HttpClientModule,
     UserModule,
     ThemesModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
   ],
   providers: [],
