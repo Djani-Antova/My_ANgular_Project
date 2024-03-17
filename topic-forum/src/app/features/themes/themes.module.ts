@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { ThemeDetailsComponent } from './theme-details/theme-details.component';
 import { ThemeAddComponent } from './theme-add/theme-add.component';
@@ -17,7 +18,7 @@ import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
     ThemesLimitComponent,
   ],
   imports: [
-    CommonModule, ThemeRoutingModule
+    CommonModule, ThemeRoutingModule, FormsModule
   ],
   exports: [
     ThemesAllComponent,

@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { ThemeAddComponent } from "./theme-add/theme-add.component";
 import { ThemesAllComponent } from "./themes-all/themes-all.component";
 import { ThemeDetailsComponent } from "./theme-details/theme-details.component";
-import { ThemeAddComponent } from "./theme-add/theme-add.component";
 import { HowWorksComponent } from "../how-works/how-works.component";
 
 const routes: Routes = [
