@@ -1,49 +1,111 @@
 <!-- READ MODE -->
-
-    <div class="wrapper">
-        <div class="img-area">
-          <div class="inner-area">
-            <img src="https://image.shutterstock.com/image-vector/anonymous-vector-icon-incognito-sign-260nw-1850222983.jpg" alt="">
-          </div>
-        </div>
-        
-        <div class="name" class="read">
-            <h3>Profile Info</h3>
-        </div>
-        <div class="about" class="read">Username: Prince</div>
-        <div class="about" class="read">Email: alabala&#64;gmail.com</div>
-        <div class="about" class="read">Telephone: ++3598767867</div>
-        <div class="social-icons"></div>
-        <div class="buttons">
-          <button>Edit</button>
-       
-          <button>Cancel</button>
-        </div>
+<ng-container *ngIf="!isEditableMode">
+  <div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <img
+          src="https://image.shutterstock.com/image-vector/anonymous-vector-icon-incognito-sign-260nw-1850222983.jpg"
+          alt=""
+        />
       </div>
-    
-      <!-- EDIT MODE -->
-      <div>
-        <div class="wrapper">
-            <div class="img-area">
-              <div class="inner-area">
-                <img src="https://image.shutterstock.com/image-vector/anonymous-vector-icon-incognito-sign-260nw-1850222983.jpg" alt="">
-              </div>
-            </div>
-            <div class="icon arrow"></div>
-            <div class="icon dots"></div>
-            <!-- Editable fields start here -->
-            <div>
-                <div class="about editable"><label>Username:</label><input type="text" value="Prince" /></div>
-                <div class="about editable"><label>Email:</label><input type="email" value="alabala@gmail.com" /></div>
-                <div class="about editable"><label>Telephone:</label><input type="tel" value="+3598767867" /></div>
-            </div>
-         
-            <!-- Editable fields end here -->
-            <div class="buttons">
-              <button>Save</button>
-              <button>Cancel</button>
-            </div>
+    </div>
+
+    <div class="name" class="read">
+      <h3>{{ profileDetails.username }}</h3>
+    </div>
+    <div class="about" class="read">
+      Username: {{ profileDetails.username }}
+    </div>
+    <div class="about" class="read">Email: {{ profileDetails.email }}</div>
+    <div class="about" class="read">
+      Telephone: ++{{ profileDetails.phoneNumber }}
+    </div>
+    <div class="social-icons"></div>
+    <div class="buttons">
+      <button (click)="onToggle()">Edit</button>
+      <button id="canceled" (click)="onCancelHandler()">Back</button>
+    </div>
+  </div>
+</ng-container>
+
+<!-- EDIT MODE -->
+
+<ng-container *ngIf="isEditableMode">
+  <div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <img
+          src="https://image.shutterstock.com/image-vector/anonymous-vector-icon-incognito-sign-260nw-1850222983.jpg"
+          alt=""
+        />
       </div>
-     
+    </div>
 
+    <div class="name" class="read">
+      <h3>{{ profileDetails.username }}</h3>
+    </div>
 
+    <!-- Editable fields start here -->
+
+    <form [formGroup]="form" (ngSubmit)="onSaveHandler()">
+      <div class="about editable">
+        <label>Username:</label>
+        <input 
+        type="text" 
+        name="username"
+        id="username"
+        [value]="profileDetails.username" 
+        formControlName="username"
+        />
+      </div>
+      <ng-container *ngIf="form.get('username')?.touched">
+        <p class="error" *ngIf="form.get('username')?.errors?.['required']">
+          Username is required!
+        </p>
+        <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
+          Username must have at least 5 characters!
+        </p>
+      </ng-container>
+
+      <div class="about editable">
+        <label>Email:</label>
+        <input 
+        type="email" 
+        name="email"
+        id="email"
+        [value]="profileDetails.email" 
+        formControlName="email"
+        />
+      </div>
+        <!-- email validations -->
+        <ng-container *ngIf="form.get('email')?.touched">
+          <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+            Email is required!
+          </p>
+          <p
+            class="error"
+            *ngIf="form.get('email')?.errors?.['emailValidator']"
+          >
+            Email is not valid!
+          </p>
+        </ng-container>
+      <div class="about editable">
+        <label>Telephone: ++</label>
+        <input 
+        type="text" 
+        name="phoneNumber"
+        id="phoneNumber"
+        [value]="profileDetails.phoneNumber" 
+        formControlName="phoneNumber"
+        />
+      </div>
+ 
+      <!-- Editable fields end here -->
+
+      <div class="buttons">
+        <button>Save</button>
+        <button (click)="onCancel($event)">Cancel</button>
+      </div>
+    </form>
+  </div>
+</ng-container>
