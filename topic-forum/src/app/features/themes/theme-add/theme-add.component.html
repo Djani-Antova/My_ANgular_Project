@@ -1,27 +1,66 @@
 <section class="topics-detail-section section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-12 m-auto">
-                <!-- Static form for demonstration -->
-                
-                <form>
-                    <h4>Add new theme</h4>
-                    <div class="form-group">
-                        <label for="themeTitle" class="form-label">Theme Title</label>
-                        <input type="text" class="form-control" id="themeTitle" name="themeTitle" placeholder="Title">
-                    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-12 m-auto">
+        <form #form="ngForm" (ngSubmit)="addNewTheme(form)">
+          <h4>Add new topic</h4>
+          <div class="form-group">
+            <label for="themeTitle" class="form-label">Topic Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="themeTitle"
+              name="themeTitle"
+              placeholder="Title"
+              #inputThemeName="ngModel"
+              ngModel
+              required 
+              minlength="5"
+            />
+            <ng-container *ngIf="inputThemeName.touched">
+                <p class="error" *ngIf="inputThemeName?.errors?.['required']">
+                  Theme name is required.
+                </p>
+                <p class="error" *ngIf="inputThemeName?.errors?.['minlength']">
+                  Theme name must be at least 5 characters.
+                </p>
+              </ng-container>
+          </div>
 
+          <div class="form-group">
+            <label for="themeDescription" class="form-label"
+              >Topic Description</label
+            >
+            <textarea
+              class="form-control"
+              id="themeDescription"
+              name="themeDescription"
+              rows="15"
+              placeholder="Post"
+              #textareaPostText="ngModel"
+              ngModel
+              required 
+              minlength="10"
+            ></textarea>
+            <ng-container *ngIf="textareaPostText.touched">
+                <p class="error" *ngIf="textareaPostText?.errors?.['required']">
+                    Please enter the content for your post; this field cannot be empty.
+                </p>
+                <p class="error" *ngIf="textareaPostText?.errors?.['minlength']">
+                    Your post needs to be a bit longer - at least 10 characters, please!
+                </p>
+              </ng-container>
+          </div>
 
-
-                    <div class="form-group">
-                        <label for="themeDescription" class="form-label">Theme Description</label>
-                        <textarea class="form-control" id="themeDescription" name="themeDescription" rows="15"
-                            placeholder="Post"></textarea>
-                    </div>
-
-                    <button type="button" class="btn btn-primary">Create Theme</button>
-                </form>
-            </div>
-        </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="addNewTheme(form)"
+          >
+            Create Theme
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 </section>

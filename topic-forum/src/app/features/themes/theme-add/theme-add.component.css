@@ -36,5 +36,17 @@
     border-radius: 6px; /* Rounded corners for the container */
     box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.4);
   }
+
+   /* errors  */
+
+   p.error {
+    border-radius: 0.3em;
+    color: red;
+    font-size: 16px;
+    }
+    
+    .input-error {
+    border-left-color: red;
+    }
   
   
