@@ -1,21 +1,21 @@
 export interface User {
-    email: string;
-    username: string;
-    password: string;
-    rePassword: string;
-    _id: string;
+  email: string;
+  username: string;
+  password: string;
+  rePassword: string;
+  _id: string;
 }
 
 export interface UserForAuth {
-    firstName: string;
-    email: string;
-    phoneNumber: string;
-    password: string;
-    id: string;
-  }
+  username: string;
+  email: string;
+  phoneNumber: string;
+  password: string;
+  id: string;
+}
 
-  export interface ProfileDetails {
-    username: string;
-    email: string;
-    phoneNumber: string
-  }
+export interface ProfileDetails {
+  username: string;
+  email: string;
+  phoneNumber: string;
+}
