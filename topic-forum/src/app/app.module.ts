@@ -9,7 +9,6 @@ import { ThemesModule } from './features/themes/themes.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './features/not-found/not-found.component'
 import { HomeComponent } from './features/home/home.component';
-import { UserModule } from './features/user/user.module';
 import { HowWorksComponent } from './features/how-works/how-works.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { cookieInterceptorProvider } from './core/cookie.interceptor';
@@ -29,7 +28,6 @@ import { cookieInterceptorProvider } from './core/cookie.interceptor';
     SharedModule,
     ThemesModule,
     HttpClientModule,
-    UserModule,
     ThemesModule,
     ReactiveFormsModule,
     FormsModule,

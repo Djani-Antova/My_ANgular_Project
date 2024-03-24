@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { HomeComponent } from './features/home/home.component';
+import { ErrorComponent } from './core/error/error.component';
 
-// import { ErrorComponent } - TODO make it
 
 
   const routes: Routes = [
@@ -15,8 +15,9 @@ import { HomeComponent } from './features/home/home.component';
     {
       path: 'home', component: HomeComponent
     },
+    {path: 'auth', loadChildren: () => import('./features/user/user.module').then(m => m.UserModule )},
     {
-      path: 'error', component: NotFoundComponent
+      path: 'error', component: ErrorComponent
     },
     {
       path: '**', component: NotFoundComponent
