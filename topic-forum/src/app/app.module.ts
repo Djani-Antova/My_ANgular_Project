@@ -12,6 +12,7 @@ import { HomeComponent } from './features/home/home.component';
 import { UserModule } from './features/user/user.module';
 import { HowWorksComponent } from './features/how-works/how-works.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { cookieInterceptorProvider } from './core/cookie.interceptor';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [cookieInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
