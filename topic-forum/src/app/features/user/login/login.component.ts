@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
-import { FormBuilder, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { emailValidator } from '../validators/email.validator';
 import { DOMAINS_FOR_EMAIL } from '../constants';
 
@@ -26,10 +26,14 @@ export class LoginComponent {
       return;
     }
 
-    console.log(this.form.value);
+    const email: string = this.form.value.email!; // ! -> non-null assertion operator to assert that these values are strings.
+    const password: string = this.form.value.password!;
     
-    this.userService.login();
-    this.router.navigate(['/']);
+    this.userService.login(email, password).subscribe(() => {
+      this.router.navigate(['/']);
+    })
+
+    
   }
 
   
