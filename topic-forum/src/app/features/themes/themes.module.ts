@@ -7,6 +7,7 @@ import { ThemeAddComponent } from './theme-add/theme-add.component';
 import { ThemesAllComponent } from './themes-all/themes-all.component';
 import { ThemeRoutingModule } from './theme-routing.module';
 import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -18,7 +19,7 @@ import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
     ThemesLimitComponent,
   ],
   imports: [
-    CommonModule, ThemeRoutingModule, FormsModule
+    CommonModule, ThemeRoutingModule, FormsModule, SharedModule
   ],
   exports: [
     ThemesAllComponent,

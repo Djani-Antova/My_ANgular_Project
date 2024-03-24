@@ -16,7 +16,7 @@ export class ThemeAddComponent {
     if (form.invalid) {
       return;
     }
-    console.log(form.value);
+   
     
     // const { themeName, postText } = form.value;
 

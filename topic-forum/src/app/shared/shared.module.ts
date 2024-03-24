@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CustomSlicePipe } from './pipes/customSlice.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CustomSlicePipe
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports: [
+    CustomSlicePipe
   ]
 })
 export class SharedModule { }

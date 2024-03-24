@@ -20,7 +20,6 @@ export class ThemesAllComponent implements OnInit {
 
     this.api.getThemes().subscribe({ //getThemes() is a method that returns observable => so we subscribe
       next: (themes) => {
-        console.log(themes);
         this.themesList = themes;
         // this.api.getPosts().subscribe((posts) => {  //TODO delete this line from here and include in for each theme, in Theme-details
         //  console.log(posts);

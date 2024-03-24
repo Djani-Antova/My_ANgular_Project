@@ -32,7 +32,7 @@ export class ProfileComponent {
   }
   
   onSaveHandler():void {
-    console.log(this.form.value);
+  
     if(this.form.invalid) {
       return
     }
