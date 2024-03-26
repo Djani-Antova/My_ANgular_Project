@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomSlicePipe } from './pipes/customSlice.pipe';
+import { ElapsedTimeSoFarPipe } from './pipes/elapsed-time-so-far.pipe';
 
 
 
 @NgModule({
   declarations: [
-    CustomSlicePipe
+    CustomSlicePipe,
+    ElapsedTimeSoFarPipe
   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    CustomSlicePipe
+    CustomSlicePipe, ElapsedTimeSoFarPipe
   ]
 })
 export class SharedModule { }

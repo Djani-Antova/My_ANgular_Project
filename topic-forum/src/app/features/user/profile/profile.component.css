@@ -16,6 +16,9 @@ body{
   background: #ecf0f3;
  
 }
+h3 {
+  text-decoration: underline;
+}
 
 .wrapper,
 .wrapper .img-area,

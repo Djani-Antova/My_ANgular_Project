@@ -17,5 +17,5 @@ export interface UserForAuth {
 export interface ProfileDetails {
   username: string;
   email: string;
-  phoneNumber: string;
+  // phoneNumber: string;
 }

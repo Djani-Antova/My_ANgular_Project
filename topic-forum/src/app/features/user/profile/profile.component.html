@@ -18,7 +18,7 @@
     </div>
     <div class="about" class="read">Email: {{ profileDetails.email }}</div>
     <div class="about" class="read">
-      Telephone: ++{{ profileDetails.phoneNumber }}
+      <!-- Telephone: ++{{ profileDetails.phoneNumber }} -->
     </div>
     <div class="social-icons"></div>
     <div class="buttons">
@@ -47,7 +47,7 @@
 
     <!-- Editable fields start here -->
 
-    <form [formGroup]="form" (ngSubmit)="onSaveHandler()">
+    <form [formGroup]="form" (ngSubmit)="saveHandler()">
       <div class="about editable">
         <label>Username:</label>
         <input 
@@ -90,14 +90,14 @@
           </p>
         </ng-container>
       <div class="about editable">
-        <label>Telephone: ++</label>
+        <!-- <label>Telephone: ++</label>
         <input 
         type="text" 
         name="phoneNumber"
         id="phoneNumber"
         [value]="profileDetails.phoneNumber" 
         formControlName="phoneNumber"
-        />
+        /> -->
       </div>
  
       <!-- Editable fields end here -->
