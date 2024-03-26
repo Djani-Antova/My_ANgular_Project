@@ -5,12 +5,12 @@
         <form #form="ngForm" (ngSubmit)="addNewTheme(form)">
           <h4>Add new topic</h4>
           <div class="form-group">
-            <label for="themeTitle" class="form-label">Topic Title</label>
+            <label for="themeName" class="form-label">Topic Title</label>
             <input
               type="text"
               class="form-control"
-              id="themeTitle"
-              name="themeTitle"
+              id="themeName"
+              name="themeName"
               placeholder="Title"
               #inputThemeName="ngModel"
               ngModel
@@ -28,13 +28,13 @@
           </div>
 
           <div class="form-group">
-            <label for="themeDescription" class="form-label"
+            <label for="postText" class="form-label"
               >Topic Description</label
             >
             <textarea
               class="form-control"
-              id="themeDescription"
-              name="themeDescription"
+              id="postText"
+              name="postText"
               rows="15"
               placeholder="Post"
               #textareaPostText="ngModel"
