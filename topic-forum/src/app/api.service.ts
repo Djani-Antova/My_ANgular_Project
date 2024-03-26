@@ -21,6 +21,10 @@ export class ApiService {
     return this.http.get<Theme>(`${apiUrl}/themes/${id}`);
   }
 
+  addNewTheme(themeName: string, postText: string) {
+    return this.http.post<Theme>('/api/themes', { themeName, postText })
+  }
+
   // getLastThemes(limit?: number) {    // Rest-api do not support limit for themes
   //   const { apiUrl } = environment;
   //   const limitCount = limit ? `?limit=${limit}` : '';
