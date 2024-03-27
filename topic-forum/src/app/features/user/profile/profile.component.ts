@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ProfileDetails } from 'src/app/types/user';
 import { emailValidator } from '../validators/email.validator';
 import { DOMAINS_FOR_EMAIL } from '../constants';
-import { Router } from '@angular/router'; // Import Router
+import { Router } from '@angular/router'; 
 import { UserService } from '../user.service';
 
 @Component({
