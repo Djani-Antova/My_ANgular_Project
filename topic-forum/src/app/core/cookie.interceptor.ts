@@ -9,7 +9,7 @@ const { apiUrl } = environment;
 
 @Injectable()
 
-class CookieInterceptor implements HttpInterceptor {
+export class CookieInterceptor implements HttpInterceptor {
 
     constructor(private errorService: ErrorService, private router: Router) {}
 
