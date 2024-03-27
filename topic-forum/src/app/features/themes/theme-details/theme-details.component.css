@@ -92,3 +92,7 @@
   justify-content: center; /* Centers the button horizontally */
   margin-top: 20px; /* Adds some space above the button */
 }
+time {
+  font-style: italic;
+  color: rgb(28, 185, 185);
+}
