@@ -20,7 +20,7 @@
 
                             <div *ngFor="let theme of themesList; let i = index" class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                 <div class="custom-block bg-white shadow-lg">
-                                    <a routerLink="/themes/123"> 
+                                    <a [routerLink]="theme._id"> 
                                         <!-- TODO edit link -->
                                         <div class="d-flex">
                                             <div>
@@ -30,7 +30,7 @@
                                                 <!-- <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                                                 <br /> -->
                                                 <p class="mb-0"><strong>Comments:</strong> 14 </p>
-                                                <p class="mb-0"><strong>Created:</strong> {{ theme.created_at }}</p>
+                                                <p class="mb-0"><strong>Created on:</strong> {{ theme.created_at | elapsedTimeWithHours}}</p>
                                             </div>
                                             <span class="badge bg-design rounded-pill ms-auto">{{theme.subscribers.length || 0}}</span>
                                         </div>

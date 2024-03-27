@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { ApiService } from 'src/app/api.service';
 import { Theme } from 'src/app/types/theme';
@@ -10,7 +11,7 @@ import { Theme } from 'src/app/types/theme';
 })
 export class ThemesAllComponent implements OnInit {
   themesList: Theme[] = [];
-  // subscription!: Subscription; - TODO if needed subscription
+  subscription!: Subscription;  //TODO if needed subscription
   errMessage!: string; 
 
   constructor(private api: ApiService, ) { }
@@ -30,6 +31,12 @@ export class ThemesAllComponent implements OnInit {
         this.errMessage = err.error.message || 'An error occurred while fetching themes.';
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }
 
