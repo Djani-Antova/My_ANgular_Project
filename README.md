@@ -93,7 +93,7 @@ message &quot;Already liked&quot;;
 ![Details View](topic-forum/src/assets/images/screenshots/posts-logged.PNG "Details View")
 
 #### Theme deatails - delete post
-![Delete View](topic-forum/src/assets/images/screenshots/delete.PNG "Delete View")
+![Delete View](topic-forum/src/assets/images/screenshots/delete-post.PNG "Delete View")
 
 #### Theme deatails - edit post
 ![Edit View](topic-forum/src/assets/images/screenshots/edit.PNG "Edit View")
