@@ -31,7 +31,7 @@ application&#39;s needs.
 ### Home page
 Public page for all users. Home page retrieves html with latest 3 created themes.
 There is a button with an option navigating to All Topics page.
-![All Topics View](topic-forum/src/assets/images/screenshots/all-themes.PNG "Home View")
+![Home View](topic-forum/src/assets/images/screenshots/all-themes.PNG "Home View")
 
 ### Login page
 The login form expects as input: email and password.
@@ -51,7 +51,7 @@ Valid inputs in this case are:
 &quot;bg&quot; or &quot;com&quot;.
 - Password should be at least 5 symbols as well
 - Repeat password and password must matched.
-![Login View](topic-forum/src/assets/images/screenshots/register.PNG "Register View")
+![Register View](topic-forum/src/assets/images/screenshots/register.PNG "Register View")
 
 ### DEMO USERS
 - carina@gmail.com pass: 123123;
@@ -72,8 +72,8 @@ The &quot;Post Theme&quot; button should be disabled if the inputs are NOT valid
 Page only for logged in users
 Profile page contains:
 - personal account information for user;
-image.png
-…
+![Profile View](topic-forum/src/assets/images/screenshots/profile.PNG "Profile View")
+
 ### Search page
 Public page for all users.
 Search theme - case insensitive
@@ -83,22 +83,21 @@ The page there are two parts - public and private(for logged in users).
 1. Public part:
 - all users can see post text, date of create, poster user and numbers of
 likes, but not to like, edit, delete post or to add a new comment.
-image.png
-…
+![Details View](topic-forum/src/assets/images/screenshots/posts-not-logged.PNG "Details View")
 
 2. Private part - only for logged in users:
 - Can posts a new comment;
 - Can likes every comment. If it already liked the post, there are a
 message &quot;Already liked&quot;;
 - If the user is owner of post, it sees edit and delete buttons.
-image.png
-…
+![Details View](topic-forum/src/assets/images/screenshots/posts-logged.PNG "Details View")
+
 #### Theme deatails - delete post
-image.png
-…
+![Delete View](topic-forum/src/assets/images/screenshots/delete.PNG "Delete View")
+
 #### Theme deatails - edit post
-image.png
-…
+![Edit View](topic-forum/src/assets/images/screenshots/edit.PNG "Edit View")
+
 
 ## Used additional libraries
 - moment js
