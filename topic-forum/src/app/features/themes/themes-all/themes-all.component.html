@@ -29,7 +29,7 @@
                                                 <h5 class="mb-2">{{ theme.themeName | customSlice :25}}</h5>
                                                 <!-- <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                                                 <br /> -->
-                                                <p class="mb-0"><strong>Comments:</strong> 14 </p>
+                                                <p class="mb-0"><strong>Comments:</strong> {{theme.posts.length}} </p>
                                                 <p class="mb-0"><strong>Created on:</strong> {{ theme.created_at | elapsedTimeWithHours}}</p>
                                             </div>
                                             <span class="badge bg-design rounded-pill ms-auto">{{theme.subscribers.length || 0}}</span>
