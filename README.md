@@ -31,7 +31,7 @@ application&#39;s needs.
 ### Home page
 Public page for all users. Home page retrieves html with latest 3 created themes.
 There is a button with an option navigating to All Topics page.
-![All Topics View](topic-forum/src/assets/images/screenshots/all-themes.PNG "Footer View")
+![All Topics View](topic-forum/src/assets/images/screenshots/all-themes.PNG "Home View")
 
 ### Login page
 The login form expects as input: email and password.
@@ -39,7 +39,7 @@ There is a validation of email:
 - Email address must have at least 9 symbols. The valid domain name -
 &quot;bg&quot; or &quot;com&quot;.
 - Password should be at least 5 symbols as well
-![Login View](topic-forum/src/assets/images/screenshots/login.PNG "Footer View")
+![Login View](topic-forum/src/assets/images/screenshots/login.PNG "Login View")
 
 ### Register page
 
@@ -51,14 +51,14 @@ Valid inputs in this case are:
 &quot;bg&quot; or &quot;com&quot;.
 - Password should be at least 5 symbols as well
 - Repeat password and password must matched.
-![Login View](topic-forum/src/assets/images/screenshots/register.PNG "Footer View")
+![Login View](topic-forum/src/assets/images/screenshots/register.PNG "Register View")
 
 ### DEMO USERS
 - carina@gmail.com pass: 123123;
 - peter@gmail.com pass: 123123;
 - marina@gmail.com pass: 123123;
 
-### Add new theme page
+### Add new topic
 Page only for logged in users.
 Every logged in user can create a new theme in forum.
 The new theme form expects as input: theme name, post text.
@@ -66,8 +66,7 @@ Valid data in this case is:
 - Theme name - should be at least 5 characters
 - Post text - should be at least 10 characters long
 The &quot;Post Theme&quot; button should be disabled if the inputs are NOT valid.
-image.png
-…
+![Create View](topic-forum/src/assets/images/screenshots/create.PNG "Create View")
 
 ### Profile page
 Page only for logged in users
