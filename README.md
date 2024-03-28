@@ -20,12 +20,12 @@ application&#39;s needs.
 ## Site overview
 ### Every page contains navigation
 ### NON logged in user
-![Non Logged-in User View](topic-forum/src/assets/images/screenshots/header-not-logged-in.png "Non Logged-in User View")
+![Non Logged-in User View](topic-forum/src/assets/images/screenshots/header-not-logged-in.PNG "Non Logged-in User View")
 
-![Non Logged-in User View](topic-forum\src\assets\images\screenshots\header-logged-in.PNG)
-- logged in user
-image.png
-…
+
+### Logged in user
+![Logged-in User View](topic-forum/src/assets/images/screenshots/header-logged-in.PNG "Logged-in User View")
+
 ### Every page contains footer
 ….
 ### Home page
