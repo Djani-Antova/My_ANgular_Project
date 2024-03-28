@@ -22,7 +22,7 @@ application&#39;s needs.
 ### NON logged in user
 ![Non Logged-in User View](topic-forum/src/assets/images/screenshots/header-not-logged-in.png "Non Logged-in User View")
 
-
+![Non Logged-in User View](topic-forum\src\assets\images\screenshots\header-logged-in.PNG)
 - logged in user
 image.png
 …
