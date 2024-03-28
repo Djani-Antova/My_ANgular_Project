@@ -1,6 +1,22 @@
-.navbar {
+.navbar  {
     background: transparent;
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     border-bottom: 1px solid rgba(128, 208, 199, 0.35);
     z-index: 9;
+}
+
+#user {
+    display: inline-block;
+    color: var(--white-color);
+    font-family: var(--title-font-family);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-icon {
+    margin-left: 12px;
 }

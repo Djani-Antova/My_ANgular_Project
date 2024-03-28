@@ -7,7 +7,7 @@
         <div class="col-lg-8 col-12 m-auto">
           <!-- Theme Title & Creation Date -->
           <h3 class="mb-4">{{theme?.themeName}}</h3>
-          <p *ngIf="theme">Created: <time>{{ theme.created_at | elapsedTimeSoFar }} </time></p>
+          <p *ngIf="theme">Created: <time>{{ theme.created_at | elapsedTimeWithHours }} </time></p>
   
           <!-- Comments Section -->
           <div *ngFor="let post of theme?.posts" class="comment-section">
@@ -22,8 +22,8 @@
               <p>{{post.text}}</p>
             </div>
             <div class="comment-footer">
-              <!-- Like Button -->
-              <i class="fa fa-thumbs-up" [style.color]="post.likes.includes(userId) ? 'grey' : '#6495c8'" (click)="likePost(post._id)"></i>
+                <!-- Like Button -->
+              <i class="fa fa-heart" [style.color]="post.likes.includes(userId) ? 'grey' : '#6495c8'" (click)="likePost(post._id)" ></i>
               <span>{{post.likes.length}} likes</span>
               <!-- Edit and Delete Buttons for Post Owner -->
               <!-- <i *ngIf="post.userId._id === userId" class="fa fa-edit" (click)="editPost(post._id)"></i> -->
