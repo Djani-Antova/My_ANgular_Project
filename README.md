@@ -27,7 +27,7 @@ application&#39;s needs.
 ![Logged-in User View](topic-forum/src/assets/images/screenshots/header-logged-in.PNG "Logged-in User View")
 
 ### Every page contains footer
-….
+![Footer View](topic-forum/src/assets/images/screenshots/footer.PNG "Footer View")
 ### Home page
 Public page for all users.
 Home page retrieves html with latest 3 created themes.
