@@ -22,26 +22,25 @@ application&#39;s needs.
 ### NON logged in user
 ![Non Logged-in User View](topic-forum/src/assets/images/screenshots/header-not-logged-in.PNG "Non Logged-in User View")
 
-
 ### Logged in user
 ![Logged-in User View](topic-forum/src/assets/images/screenshots/header-logged-in.PNG "Logged-in User View")
 
 ### Every page contains footer
 ![Footer View](topic-forum/src/assets/images/screenshots/footer.PNG "Footer View")
+
 ### Home page
-Public page for all users.
-Home page retrieves html with latest 3 created themes.
-Inside there is a button with an option navigating to All Themes page.
-image.png
-…
+Public page for all users. Home page retrieves html with latest 3 created themes.
+There is a button with an option navigating to All Topics page.
+![All Topics View](topic-forum/src/assets/images/screenshots/all-themes.PNG "Footer View")
+
 ### Login page
 The login form expects as input: email and password.
 There is a validation of email:
 - Email address must have at least 9 symbols. The valid domain name -
 &quot;bg&quot; or &quot;com&quot;.
 - Password should be at least 5 symbols as well
-image.png
-…
+![Login View](topic-forum/src/assets/images/screenshots/login.PNG "Footer View")
+
 ### Register page
 
 The register form expects as input: username, email, password and confirm
@@ -52,8 +51,8 @@ Valid inputs in this case are:
 &quot;bg&quot; or &quot;com&quot;.
 - Password should be at least 5 symbols as well
 - Repeat password and password must matched.
-image.png
-…
+![Login View](topic-forum/src/assets/images/screenshots/register.PNG "Footer View")
+
 ### DEMO USERS
 - carina@gmail.com pass: 123123;
 - peter@gmail.com pass: 123123;
