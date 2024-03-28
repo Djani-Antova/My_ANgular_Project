@@ -101,6 +101,6 @@ image.png
 image.png
 …
 
-## Used additional lybraries
+## Used additional libraries
 - moment js
 - bootstrap
