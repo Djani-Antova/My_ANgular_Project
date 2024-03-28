@@ -54,10 +54,10 @@ Valid inputs in this case are:
 image.png
 …
 ### DEMO USERS
-- george@abv.bg pass: 123123;
-- peter@abv.bg pass: 123123;
+- carina@gmail.com pass: 123123;
+- peter@gmail.com pass: 123123;
 - marina@gmail.com pass: 123123;
-- janee@gmail.com pass: 12345;
+
 ### Add new theme page
 Page only for logged in users.
 Every logged in user can create a new theme in forum.
