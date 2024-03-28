@@ -64,7 +64,7 @@ Every logged in user can create a new theme in forum.
 The new theme form expects as input: theme name, post text.
 Valid data in this case is:
 - Theme name - should be at least 5 characters
-- Post text - should be at least 25 characters long
+- Post text - should be at least 10 characters long
 The &quot;Post Theme&quot; button should be disabled if the inputs are NOT valid.
 image.png
 …
