@@ -1,0 +1,33 @@
+<section class="topics-detail-section section-padding" id="topics-detail">
+    <div class="col-12 text-center">
+      <h2 class="mb-4">Edit Post</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Post Update Form -->
+        <form #form="ngForm" (ngSubmit)="updatePost(form)" class="user-comment-container">
+          <div class="comment-section">
+            <textarea 
+              class="form-control comment-placeholder" 
+              placeholder="Edit your post here..." 
+              name="postText" 
+              [(ngModel)]="postText" 
+              #textAreaInput="ngModel" 
+              required>
+            </textarea>
+          </div>
+          <!-- Error Message Container -->
+          <ng-container *ngIf="textAreaInput.touched">
+            <p class="error" *ngIf="textAreaInput.errors?.['required']">
+                Post is required!
+              </p>
+              
+          </ng-container>
+          <div class="submit-comment-button">
+            <button type="submit" class="btn btn-primary">Save Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  

@@ -8,6 +8,7 @@ import { ThemesAllComponent } from './themes-all/themes-all.component';
 import { ThemeRoutingModule } from './theme-routing.module';
 import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { PostEditComponent } from './post-edit/post-edit.component';
 
 
 
@@ -17,6 +18,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     ThemeAddComponent,
     ThemesAllComponent,
     ThemesLimitComponent,
+    PostEditComponent,
   ],
   imports: [
     CommonModule, ThemeRoutingModule, FormsModule, SharedModule
