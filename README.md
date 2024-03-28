@@ -19,9 +19,9 @@ application&#39;s needs.
 - ng serve – to run client Angular app
 ## Site overview
 ### Every page contains navigation
-- NON logged in user
-…..
-image.png
+### NON logged in user
+![Non Logged-in User View](src/assets/images/screenshots/header-not-logged-in.png "Non Logged-in User View")
+
 - logged in user
 image.png
 …
