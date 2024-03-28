@@ -34,11 +34,11 @@ There is a button with an option navigating to All Topics page.
 ![Home View](topic-forum/src/assets/images/screenshots/all-themes.PNG "Home View")
 
 ### Login page
+
 The login form expects as input: email and password.
 There is a validation of email:
-- Email address must have at least 9 symbols. The valid domain name -
-&quot;bg&quot; or &quot;com&quot;.
-- Password should be at least 5 symbols as well
+Email address must have at least 9 symbols. The valid domain name - &quot;bg&quot; or &quot;com&quot;.
+Password should be at least 5 symbols as well
 ![Login View](topic-forum/src/assets/images/screenshots/login.PNG "Login View")
 
 ### Register page
@@ -46,8 +46,8 @@ There is a validation of email:
 The register form expects as input: username, email, password and confirm
 password.
 Valid inputs in this case are:
-- Username should be at least 5 symbols.
-- Email address must have at least 9 symbols. The valid domain name -
+Username should be at least 5 symbols.
+Email address must have at least 9 symbols. The valid domain name -
 &quot;bg&quot; or &quot;com&quot;.
 - Password should be at least 5 symbols as well
 - Repeat password and password must matched.
