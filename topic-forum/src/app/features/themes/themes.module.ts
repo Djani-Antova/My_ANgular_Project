@@ -9,6 +9,7 @@ import { ThemeRoutingModule } from './theme-routing.module';
 import { ThemesLimitComponent } from './themes-limit/themes-limit.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PostEditComponent } from './post-edit/post-edit.component';
+import { ThemeSearchComponent } from './theme-search/theme-search.component';
 
 
 
@@ -19,6 +20,7 @@ import { PostEditComponent } from './post-edit/post-edit.component';
     ThemesAllComponent,
     ThemesLimitComponent,
     PostEditComponent,
+    ThemeSearchComponent,
   ],
   imports: [
     CommonModule, ThemeRoutingModule, FormsModule, SharedModule
@@ -26,7 +28,8 @@ import { PostEditComponent } from './post-edit/post-edit.component';
   exports: [
     ThemesAllComponent,
     ThemeDetailsComponent,
-    ThemesLimitComponent
+    ThemesLimitComponent,
+    ThemeSearchComponent
   ]
 })
 export class ThemesModule { }

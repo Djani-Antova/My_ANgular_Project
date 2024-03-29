@@ -5,6 +5,7 @@ import { ThemesAllComponent } from "./themes-all/themes-all.component";
 import { ThemeDetailsComponent } from "./theme-details/theme-details.component";
 import { HowWorksComponent } from "../how-works/how-works.component";
 import { PostEditComponent } from "./post-edit/post-edit.component";
+import { ThemeSearchComponent } from "./theme-search/theme-search.component";
 
 const routes: Routes = [
     {
@@ -34,7 +35,11 @@ const routes: Routes = [
     {
         path: 'how-works',
         component: HowWorksComponent
-    }
+    },
+    {
+        path: 'search',
+        component: ThemeSearchComponent
+    },
 ];
 
 @NgModule({
