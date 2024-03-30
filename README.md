@@ -83,17 +83,16 @@ Public page for all users.
 Search theme - case insensitive
 
 ### Theme deatails page
-The page there are two parts - public and private(for logged in users).
+The page shows in two options - public and private(for logged in users).
 1. Public part:
 - all users can see post text, date of create, poster user and numbers of
 likes, but not to like, edit, delete post or to add a new comment.
 ![Details View](topic-forum/src/assets/images/screenshots/posts-not-logged.PNG "Details View")
 
 2. Private part - only for logged in users:
-- Can posts a new comment;
-- Can likes every comment. If it already liked the post, there are a
-message &quot;Already liked&quot;;
-- If the user is owner of post, it sees edit and delete buttons.
+- Logged-in user can post a new comment;
+- Logged-in user can like every comment. If it is already liked, there are a message &quot;Already liked&quot;;
+- If the user is owner of the post, he can edit and delete the post, icons for edit and delete are rendered.
 ![Details View](topic-forum/src/assets/images/screenshots/posts-logged.PNG "Details View")
 
 #### Theme deatails - delete post
