@@ -19,10 +19,10 @@ application&#39;s needs.
 - ng serve – to run client Angular app
 ## Site overview
 ### Every page contains navigation
-### NON logged in user
+### NON logged-in user
 ![Non Logged-in User View](topic-forum/src/assets/images/screenshots/header-not-logged-in.PNG "Non Logged-in User View")
 
-### Logged in user
+### Logged-in user
 ![Logged-in User View](topic-forum/src/assets/images/screenshots/header-logged-in.PNG "Logged-in User View")
 
 ### Every page contains footer
@@ -96,6 +96,7 @@ likes, but not to like, edit, delete post or to add a new comment.
 ![Details View](topic-forum/src/assets/images/screenshots/posts-logged.PNG "Details View")
 
 #### Theme deatails - delete post
+If owner wants to delete ahis post, he got a warning
 ![Delete View](topic-forum/src/assets/images/screenshots/delete-post.PNG "Delete View")
 
 #### Theme deatails - edit post
