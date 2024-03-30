@@ -1,52 +1,84 @@
 <div class="container">
-    <div class="col-12 text-center">
-        <h3 class="mb-4">Recent Topics</h3>
-    </div>
-    
-    <!-- Search Bar -->
-    <div class="col-lg-8 col-12 mt-3 mx-auto">
-        <form #form="ngForm" (ngSubmit)="searchThemes(form)" class="mb-4">
-            <div class="input-group">
-                <input type="search"
-                       id="themeName"
-                       name="search"
-                       placeholder="Search for topic..."
-                       class="form-control"
-                       [(ngModel)]="searchTerm"
-                       required />
-                <div class="input-group-append">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-    </div>
-    
-    <!-- Topics Listing -->
-    <div class="col-lg-8 col-12 mt-3 mx-auto">
-        <!-- Dynamic Topic Component Based on Search -->
-        <div *ngFor="let theme of searchThemesList; let i = index" class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
-            <div class="d-flex">
-                <!-- Conditional Image Source -->
-                <!-- <img [src]="getThemeImage(theme)" class="custom-block-image img-fluid" alt="{{ theme.themeName }}"> -->
-                <img [src]="i % 2 === 0 ? 'assets/images/topics/undraw_Remote_design_team_re_urdx.png' : 'assets/images/topics/undraw_online_ad_re_ol62.png'" class="custom-block-image img-fluid" alt="{{ theme.themeName }}">
+  <div class="col-12 text-center">
+    <h3 class="mb-4">Recent Topics</h3>
+  </div>
 
-                <div class="custom-block-topics-listing-info d-flex">
-                    <div>
-                        <h5 class="mb-2">{{ theme.themeName | customSlice}} </h5>
-                        <p class="mb-0">
-                            {{ theme.posts && theme.posts.length > 0 ? (theme.posts[0].text ) : 'No posts available' }}
-                          </p>
-                          
-                        <a [routerLink]="['/themes', theme._id]" class="btn custom-btn mt-3 mt-lg-4">Learn More</a>
-                    </div>
-                    <span class="badge bg-design rounded-pill ms-auto">{{ theme.subscribers.length || 0 }}</span>
-                </div>
-            </div>
+  <!-- Search Bar -->
+  <div class="col-lg-8 col-12 mt-3 mx-auto">
+    <form #form="ngForm" (ngSubmit)="searchThemes(form)" class="mb-4">
+      <div class="input-group">
+        <input
+          type="search"
+          id="themeName"
+          name="search"
+          placeholder="Search for topic..."
+          class="form-control"
+          [(ngModel)]="searchTerm"
+          required
+        />
+        <div class="input-group-append"></div>
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+
+  <!-- Topics Listing -->
+  <div class="col-lg-8 col-12 mt-3 mx-auto">
+    <!-- Dynamic Topic Component Based on Search -->
+    <div
+      *ngFor="let theme of searchThemesList; let i = index"
+      class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5"
+    >
+      <div class="d-flex">
+        <!-- Conditional Image Source -->
+        <!-- <img [src]="getThemeImage(theme)" class="custom-block-image img-fluid" alt="{{ theme.themeName }}"> -->
+        <img
+          [src]="
+            i % 2 === 0
+              ? 'assets/images/topics/undraw_Remote_design_team_re_urdx.png'
+              : 'assets/images/topics/undraw_online_ad_re_ol62.png'
+          "
+          class="custom-block-image img-fluid"
+          alt="{{ theme.themeName }}"
+        />
+
+        <div class="custom-block-topics-listing-info d-flex">
+          <div>
+            <h5 class="mb-2">{{ theme.themeName | customSlice }}</h5>
+            <p class="mb-0">
+              {{
+                theme.posts && theme.posts.length > 0
+                  ? theme.posts[0].text
+                  : "No posts available"
+              }}
+            </p>
+
+            <a
+              [routerLink]="['/themes', theme._id]"
+              class="btn custom-btn mt-3 mt-lg-4"
+              >Learn More</a
+            >
+          </div>
+          <span class="badge bg-design rounded-pill ms-auto">{{
+            theme.subscribers.length || 0
+          }}</span>
         </div>
-    </div> 
-
-    <div *ngIf="searchThemesList.length == 0"
-    class="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-gray-700">
-      <p>There no founded themes!</p>
+      </div>
     </div>
+  </div>
+
+  <div class="col-lg-8 col-12 mt-3 mx-auto">
+    <div
+      *ngIf="searchThemesList.length == 0"
+      class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5"
+    >
+      <div class="d-flex">
+        <div class="custom-block-topics-listing-info d-flex">
+          <div>
+            <p>There no founded themes!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
