@@ -31,7 +31,7 @@ application&#39;s needs.
 ### Home page
 Public page for all users. Home page retrieves html with latest 3 created themes.
 There is a button with an option navigating to All Topics page.
-![Home View](topic-forum/src/assets/images/screenshots/all-themes.PNG "Home View")
+![Home View](topic-forum/src/assets/images/screenshots/home.PNG "Home View")
 
 ### Login page
 
