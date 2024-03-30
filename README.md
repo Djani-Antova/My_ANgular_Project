@@ -33,6 +33,10 @@ Public page for all users. Home page retrieves html with latest 3 created themes
 There is a button with an option navigating to All Topics page.
 ![Home View](topic-forum/src/assets/images/screenshots/home.PNG "Home View")
 
+### Browse All page
+Public page for all users. All themes are rendered.
+![All-themes View](topic-forum/src/assets/images/screenshots/all-themes.PNG "All-themes View")
+
 ### Login page
 
 The login form expects as input: email and password.
