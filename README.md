@@ -102,6 +102,11 @@ If owner wants to delete ahis post, he got a warning
 #### Theme deatails - edit post
 ![Edit View](topic-forum/src/assets/images/screenshots/edit.PNG "Edit View")
 
+#### Applied error handling to avoid crashes 
+![Error View](topic-forum/src/assets/images/screenshots/error-login.PNG "Error View")
+![Error View](topic-forum/src/assets/images/screenshots/error-register.PNG "Error View")
+![Error View](topic-forum/src/assets/images/screenshots/error-themes.PNG "Error View")
+
 
 ## Used additional libraries
 - moment js
