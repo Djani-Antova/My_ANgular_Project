@@ -53,9 +53,7 @@ export class ThemeDetailsComponent {
         next: (theme) => {
           this.theme = theme;     
         },
-        error: (err) => {
-          this.router.navigate(["**"]);
-        }
+        error: (err) => this.errMessage = err.error.message
       })
     }
 
