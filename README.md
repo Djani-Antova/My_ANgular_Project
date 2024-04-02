@@ -107,6 +107,10 @@ If owner wants to delete ahis post, he got a warning
 ![Error View](topic-forum/src/assets/images/screenshots/error-register.PNG "Error View")
 ![Error View](topic-forum/src/assets/images/screenshots/error-themes.PNG "Error View")
 
+#### Applied Validation to avoid crashes 
+![Validation View](topic-forum/src/assets/images/screenshots/validation-create.PNG "Validation View")
+![Validation View](topic-forum/src/assets/images/screenshots/validation-login.PNG "Validation View")
+
 
 ## Used additional libraries
 - moment js
