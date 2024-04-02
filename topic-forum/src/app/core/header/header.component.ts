@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/features/user/user.service';
 
 @Component({
@@ -7,7 +8,10 @@ import { UserService } from 'src/app/features/user/user.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnDestroy{
+  subscription!: Subscription;
+  errMessage!: string;
+
   constructor(private userService: UserService, private router: Router) {}
 
   get isLoggedIn(): boolean {
@@ -23,11 +27,14 @@ export class HeaderComponent {
       next: () => {
         this.router.navigate(['/home']);
       },
-      error: () => {
-        this.router.navigate(['/auth/login']);
-      }
-      // error: (err) => this.errMessage = err.error.message TODO - add error
+      error: (err) => this.errMessage = err.error.message
     })
    
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }
