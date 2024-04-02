@@ -11,19 +11,18 @@ import { UserService } from '../user.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit { 
   isEditableMode: boolean = false;
+   errMessage!: string;
   
   profileDetails: ProfileDetails = {
     username: '',
     email: '',
-    // phoneNumber: ''
   };
 
   form = this.fb.group({
     username: ['', [Validators.required, Validators.minLength(5)]],
     email: ['', [Validators.required, emailValidator(DOMAINS_FOR_EMAIL)]],
-    // phoneNumber: ['']
   })
 
   constructor(private fb:FormBuilder, private router: Router, private userService: UserService) {}
@@ -33,8 +32,7 @@ export class ProfileComponent implements OnInit {
     this.userService.user!
     this.profileDetails = {
       username,
-      email,
-      // phoneNumber,   
+      email, 
     };
     this.form.setValue({
       username,
@@ -55,9 +53,14 @@ export class ProfileComponent implements OnInit {
     this.profileDetails = this.form.value as ProfileDetails;
     const { username, email} = this.profileDetails
 
-    this.userService.updateProfile(username, email).subscribe(() => {
-      this.onToggle();
-    })
+    this.userService.updateProfile(username, email).subscribe({
+      next: () => {
+          this.onToggle();
+      },
+      error: (err) => {
+          this.errMessage = err.error.message;
+      }
+  });
 
   }
 
@@ -66,7 +69,6 @@ export class ProfileComponent implements OnInit {
     this.onToggle();
   }
 
-    // Navigate to /home when cancel is clicked
     onCancelHandler(): void {
       this.router.navigate(['/home']);
     }
