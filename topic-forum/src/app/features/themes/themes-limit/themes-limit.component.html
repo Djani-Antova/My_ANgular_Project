@@ -26,7 +26,7 @@
                     <a href="topics-detail.html" routerLink="/how-works">                     
                         <img  src="assets/images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
                     </a>
-                    <p class="text-red" id="hello">How it works</p>
+                    <p class="text-red" id="hello" routerLink="/how-works">How it works</p>
                 </div>
             </div>
 
@@ -40,7 +40,10 @@
                             
                             <p class="text-white mb-2 latest-topics">Latest topics</p>
                             <br />                   
-                            <p class="text-white" *ngFor="let theme of themesLimitList">{{theme.themeName}}</p>
+                            <p class="text-white" *ngFor="let theme of themesLimitList">
+                                <a [routerLink]="['/themes', theme._id]" class="text-white">{{ theme.themeName }}</a>
+
+                            </p>
                             <br />
                             <button type="button" class="btn btn-primary" routerLink="/themes">Go to All Topics</button>
                         </div>
