@@ -81,6 +81,7 @@ Profile page contains:
 ### Search page
 Public page for all users.
 Search theme - case insensitive
+![Search View](topic-forum/src/assets/images/screenshots/search.PNG "Search View")
 
 ### Theme deatails page
 The page shows in two options - public and private(for logged in users).
