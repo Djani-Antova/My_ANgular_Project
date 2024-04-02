@@ -19,15 +19,11 @@ export class ThemesAllComponent implements OnInit {
   ngOnInit(): void {
   
 
-    this.api.getThemes().subscribe({ //getThemes() is a method that returns observable => so we subscribe
+    this.subscription = this.api.getThemes().subscribe({ //getThemes() is a method that returns observable => so we subscribe
       next: (themes) => {
-        this.themesList = themes;
-        // this.api.getPosts().subscribe((posts) => {  //TODO delete this line from here and include in for each theme, in Theme-details
-        //  console.log(posts);
-        
+        this.themesList = themes;        
       },
       error: (err) => {
-        console.error("Error loading themes:", err);
         this.errMessage = err.error.message || 'An error occurred while fetching themes.';
       }
     });
