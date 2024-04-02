@@ -34,8 +34,10 @@ export class ThemeSearchComponent implements OnInit, OnDestroy {
 
   searchThemes(form: NgForm): void {
     // You can access the searchTerm directly without needing to extract it from the form
-    this.searchThemesList = this.themesList.filter(theme =>
-      theme.themeName.toLowerCase().includes(this.searchTerm.toLowerCase())
+    this.searchThemesList = this.themesList
+      .filter(theme =>theme.themeName
+        .toLowerCase()
+        .includes(this.searchTerm.toLowerCase())
     );
   }
 
