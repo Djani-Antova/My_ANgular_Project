@@ -2,75 +2,63 @@
     <div class="container">
         <a class="navbar-brand" routerLink="/">
             <i class="bi-back"></i>
-            <span> Topics</span>
+            <span>Topics</span>
         </a>
 
         <!-- Mobile specific section -->
-        <div class="ms-auto me-4">
-            <!-- When the user is not logged in, show login and register icons -->
+        <div class="d-lg-none ms-auto me-4">
+            <!-- When the user is not logged in, show login and register icons (Mobile) -->
             <div *ngIf="!isLoggedIn">
                 <a routerLink="/auth/login" class="navbar-icon bi-person smoothscroll"></a>
                 <a routerLink="/auth/register" class="navbar-icon bi-person-plus smoothscroll"></a>
             </div>
 
-            <!-- When the user is logged in, show profile and logout icons -->
+            <!-- When the user is logged in, show profile and logout icons (Mobile) -->
             <div *ngIf="isLoggedIn">
                 <a routerLink="/auth/profile" class="navbar-icon bi-person-circle smoothscroll"></a>
-                <span>{{username}}'s profile</span>
                 <a routerLink="/logout" (click)="logout()" class="navbar-icon bi-box-arrow-right smoothscroll"></a>
             </div>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Navigation items... -->
             <ul class="navbar-nav ms-lg-5 me-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link click-scroll" routerLink="/home">Home</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link click-scroll" routerLink="/themes">Browse Topics</a>
                 </li>
-                 <!-- Create new theme ONLY FOR Loggedin user-->   
-                <li class="nav-item">
-                    <a class="nav-link click-scroll"  routerLink="/add-theme" *ngIf="isLoggedIn">Create Topic</a>
+                <li class="nav-item" *ngIf="isLoggedIn">
+                    <a class="nav-link click-scroll" routerLink="/add-theme">Create Topic</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link click-scroll" routerLink="/how-works">How it works</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link click-scroll" routerLink="/search">Search</a>
                 </li>
             </ul>
 
-            <!-- When the user is not logged in, show only the login icon -->
-            <div class="d-none d-lg-block" *ngIf="!isLoggedIn">
-                <a routerLink="/auth/login" class="navbar-icon bi-person smoothscroll" style="margin-right: 8px;"></a>
-                <a routerLink="/auth/register" class="navbar-icon bi-person-plus smoothscroll"></a>
-            </div>
-            
+            <!-- Desktop specific section -->
+            <div class="d-none d-lg-block ms-auto">
+                <!-- When the user is not logged in, show only the login and register icons (Desktop) -->
+                <div *ngIf="!isLoggedIn">
+                    <a routerLink="/auth/login" class="navbar-icon bi-person smoothscroll" style="margin-right: 8px;"></a>
+                    <a routerLink="/auth/register" class="navbar-icon bi-person-plus smoothscroll"></a>
+                </div>
 
-            <!-- When the user is logged in, show profile and logout icons -->
-            <div class="d-none d-lg-block" *ngIf="isLoggedIn">
-                <a routerLink="/auth/profile" class="navbar-icon bi-person-circle smoothscroll" style="margin-right: 8px;"></a>
-              
-                    <span id="user"> {{username}}'s profile </span>
-              
-
-                <a routerLink="/logout" (click)="logout()" class="navbar-icon bi-box-arrow-right smoothscroll"></a>
+                <!-- When the user is logged in, show profile and logout icons (Desktop) -->
+                <div *ngIf="isLoggedIn">
+                    <a routerLink="/auth/profile" class="navbar-icon bi-person-circle smoothscroll" style="margin-right: 8px;"></a>
+                    <span>{{username}}'s profile</span>
+                    <a routerLink="/logout" (click)="logout()" class="navbar-icon bi-box-arrow-right smoothscroll"></a>
+                </div>
             </div>
-            
         </div>
     </div>
 </nav>
-
-<header class="site-header d-flex flex-column justify-content-center align-items-center">
-
-</header>
