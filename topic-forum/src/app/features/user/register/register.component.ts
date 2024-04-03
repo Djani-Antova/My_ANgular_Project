@@ -33,11 +33,10 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router ) {}
 
-  ngOnInit(): void {
-    // Subscribe to the error observable from UserService
+  ngOnInit(): void { 
     this.subscription.add(
         this.userService.error$.subscribe(error => {
-            this.errMessage = error || 'An unknown error occurred'; // Provide a default message
+            this.errMessage = error || 'An unknown error occurred'; 
         })
     );
 }

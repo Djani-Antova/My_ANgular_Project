@@ -11,7 +11,7 @@ import { Theme } from 'src/app/types/theme';
 })
 export class ThemesAllComponent implements OnInit {
   themesList: Theme[] = [];
-  subscription!: Subscription;  //TODO if needed subscription
+  subscription!: Subscription;  
   errMessage!: string; 
 
   constructor(private api: ApiService, ) { }
@@ -19,7 +19,7 @@ export class ThemesAllComponent implements OnInit {
   ngOnInit(): void {
   
 
-    this.subscription = this.api.getThemes().subscribe({ //getThemes() is a method that returns observable => so we subscribe
+    this.subscription = this.api.getThemes().subscribe({ 
       next: (themes) => {
         this.themesList = themes;        
       },

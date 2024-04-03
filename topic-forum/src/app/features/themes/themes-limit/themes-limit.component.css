@@ -27,7 +27,7 @@
   div.custom-block-overlay-text p.latest-topics {
     color: #ddf8f5 !important;
     font-family: 'Great Vibes', cursive;
-    font-weight: 100; /* Great Vibes doesn't need a font-weight of 100 */
+    font-weight: 100; 
     font-size: 36px;
   }
   #hello {
@@ -36,10 +36,10 @@
     left: 0;
     right: 0;
     text-align: center;
-    color: rgb(11, 65, 101); /* Adjusted text color */
-    z-index: 10; /* Ensure the text appears above the image */
+    color: rgb(11, 65, 101); 
+    z-index: 10; 
     font-family: 'Great Vibes', cursive;
-    font-weight: 500; /* Great Vibes doesn't need a font-weight of 100 */
+    font-weight: 500; 
     font-size: 36px;
     cursor: pointer;
 }

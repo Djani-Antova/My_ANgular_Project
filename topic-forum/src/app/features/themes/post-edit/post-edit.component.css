@@ -1,10 +1,10 @@
-/* Assuming this CSS is added to your component's CSS file */
+
 .form-group {
-    margin-bottom: 50px; /* Space between form groups */
+    margin-bottom: 50px; 
   }
   
   .form-control {
-    border-radius: 6px; /* Rounded corners for input and textarea */
+    border-radius: 6px; 
     border: 1px solid #ced4da; /* Default Bootstrap border color */
   }
   
@@ -27,20 +27,18 @@
   
   /* Styles directly from the provided CSS for overall consistency */
   .section-padding {
-    padding: 20px 0; /* Section padding for spacing */
+    padding: 20px 0; 
   }
   
   /* Additional styling to ensure consistency with comment section theme */
   .container {
-    background-color: #f0f8ff; /* Light blue background for container */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 6px; /* Rounded corners for the container */
+    background-color: #f0f8ff; 
+    padding: 20px; 
+    border-radius: 6px; 
     box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.4);
   }
 
-
    /* errors  */
-
    p.error {
     border-radius: 0.3em;
     color: red;

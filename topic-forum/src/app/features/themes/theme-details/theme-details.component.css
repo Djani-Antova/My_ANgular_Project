@@ -15,7 +15,7 @@
   padding: 10px;
   margin-top: 20px;
   background-color: #f0f8ff;
-  min-height: 160px; /* Adjust based on your content */
+  min-height: 160px; 
 }
 
 .comment-header,
@@ -40,7 +40,7 @@
   margin-right: 10px;
   border-radius: 50%;
   font-size: 50px;
-  color: #4a6d94; /* Adjust the color as needed */
+  color: #4a6d94; 
 }
 
 .comment-footer {
@@ -52,7 +52,7 @@
 
 .comment-footer i {
   font-size: 24px;
-  color: #6495c8; /* Adjust the color to match your theme */
+  color: #6495c8; 
   margin-right: 5px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .user-comment-container {
-  margin-top: 40px; /* Additional space before the user comment section */
+  margin-top: 40px; 
 }
 
 .btn-primary {
@@ -79,18 +79,18 @@
 }
 
 .comment-placeholder {
-  width: 100%; /* Ensures the textarea spans the full width of its container */
-  margin-top: 10px; /* Adds some space above the textarea */
+  width: 100%; 
+  margin-top: 10px; 
   border-radius: 6px;
   border: 1px solid #ced4da;
   padding: 10px;
-  height: 160px; /* Adjust the height as needed */
+  height: 160px; 
 }
 
 .submit-comment-button {
   display: flex;
-  justify-content: center; /* Centers the button horizontally */
-  margin-top: 20px; /* Adds some space above the button */
+  justify-content: center; 
+  margin-top: 20px; 
 }
 time {
   font-style: italic;
@@ -98,16 +98,13 @@ time {
 }
 
 .comment-footer .already-liked-text {
-  color: rgba(176, 174, 172, 0.8) !important; /* Darker shade with some transparency */
+  color: rgba(176, 174, 172, 0.8) !important; 
   font-style: italic;
   margin: 0 15px;
   font-size: 1.2em !important;
 }
 
-
-
 /* errors  */
-
 p.error {
 border-radius: 0.3em;
 color: red;

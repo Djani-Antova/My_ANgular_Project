@@ -19,7 +19,7 @@ export class PostEditComponent implements OnInit, OnDestroy{
   postText: string | undefined;
   subscribe$!: Subscription;
   errMessage!: string;
-  // postList: Post[] = [];
+
 
   constructor(
     private apiService: ApiService,
@@ -30,7 +30,6 @@ export class PostEditComponent implements OnInit, OnDestroy{
   
   ngOnInit(): void {
     this.postId = this.activatedRoute.snapshot.params['postId'];
-    // console.log(this.postId);
 
     this.subscribe$ = this.apiService.getPosts().subscribe({
       next: (posts) => {

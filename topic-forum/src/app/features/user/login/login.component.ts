@@ -30,7 +30,7 @@ export class LoginComponent implements OnDestroy {
       return;
     }
 
-    const email: string = this.form.value.email!; // ! -> non-null assertion operator to assert that these values are strings.
+    const email: string = this.form.value.email!; 
     const password: string = this.form.value.password!;
     
     this.userService.login(email, password).subscribe({

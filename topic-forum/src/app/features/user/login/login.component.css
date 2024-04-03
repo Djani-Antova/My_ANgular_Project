@@ -1,7 +1,6 @@
 body {
 	background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
 	color: #000;
-	/* font: 14px Arial; */
 	font: 110px Arial;
 	margin: 0 auto;
 	padding: 0;
@@ -247,7 +246,6 @@ form:after {
 
     background-position: 10px center;
     padding-left: 40px;
-    /* ... other styles ... */
 }
 
 .btn-primary {
@@ -275,7 +273,6 @@ form:after {
   }
 
   /* errors  */
-
   p.error {
 	border-radius: 0.3em;
 	color: red;

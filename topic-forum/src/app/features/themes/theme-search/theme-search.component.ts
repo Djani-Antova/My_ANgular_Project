@@ -15,7 +15,7 @@ export class ThemeSearchComponent implements OnInit, OnDestroy {
   searchThemesList: Theme[] = [];
   subscription!: Subscription;
   errMessage!: string;
-  searchTerm: string = ''; // Define the searchTerm
+  searchTerm: string = ''; 
 
   constructor(private apiService: ApiService) { }
 
@@ -33,8 +33,7 @@ export class ThemeSearchComponent implements OnInit, OnDestroy {
   }
 
   searchThemes(form: NgForm): void {
-    // You can access the searchTerm directly without needing to extract it from the form
-    this.searchThemesList = this.themesList
+       this.searchThemesList = this.themesList
       .filter(theme =>theme.themeName
         .toLowerCase()
         .includes(this.searchTerm.toLowerCase())

@@ -24,7 +24,7 @@ export class CookieInterceptor implements HttpInterceptor {
         return next.handle(req)        
         .pipe(
             catchError((err) => {
-                  //TODO can catch globally errors with specific status for each error
+                
               if (err.status === 401) {
                 this.router.navigate(['/auth/login']);
               } else {

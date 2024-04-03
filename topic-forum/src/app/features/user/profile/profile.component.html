@@ -18,7 +18,7 @@
     </div>
     <div class="about" class="read">Email: {{ profileDetails.email }}</div>
     <div class="about" class="read">
-      <!-- Telephone: ++{{ profileDetails.phoneNumber }} -->
+     
     </div>
     <div class="social-icons"></div>
     <div class="buttons">
@@ -29,7 +29,6 @@
 </ng-container>
 
 <!-- EDIT MODE -->
-
 <ng-container *ngIf="isEditableMode">
   <div class="wrapper">
     <div class="img-area">
@@ -90,14 +89,6 @@
           </p>
         </ng-container>
       <div class="about editable">
-        <!-- <label>Telephone: ++</label>
-        <input 
-        type="text" 
-        name="phoneNumber"
-        id="phoneNumber"
-        [value]="profileDetails.phoneNumber" 
-        formControlName="phoneNumber"
-        /> -->
       </div>
  
       <!-- Editable fields end here -->

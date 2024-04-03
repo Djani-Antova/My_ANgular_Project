@@ -6,7 +6,7 @@ import { ThemeDetailsComponent } from "./theme-details/theme-details.component";
 import { HowWorksComponent } from "../how-works/how-works.component";
 import { PostEditComponent } from "./post-edit/post-edit.component";
 import { ThemeSearchComponent } from "./theme-search/theme-search.component";
-// import { AuthActivate } from "src/app/core/guards/auth.activate";
+import { AuthActivate } from "src/app/core/guards/auth.activate";
 
 const routes: Routes = [
     {
@@ -26,12 +26,12 @@ const routes: Routes = [
     {
         path: 'add-theme',
         component: ThemeAddComponent,
-        // canActivate: [AuthActivate]
+        canActivate: [AuthActivate]
     },
     {
         path: 'post/edit/:postId',
         component: PostEditComponent,
-        // canActivate: [AuthActivate]
+        canActivate: [AuthActivate]
     },
     {
         path: 'how-works',

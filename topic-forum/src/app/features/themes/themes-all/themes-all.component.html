@@ -16,12 +16,11 @@
                     <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel"
                         aria-labelledby="design-tab" tabindex="0">
                         <div class="row">
-                            <!-- theme component -->
-
+                            <!-- Theme component -->
                             <div *ngFor="let theme of themesList; let i = index" class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                 <div class="custom-block bg-white shadow-lg">
                                     <a [routerLink]="theme._id"> 
-                                        <!-- TODO edit link -->
+                                      
                                         <div class="d-flex">
                                             <div>
                                                 <p class="mb-0"><strong>Creator:</strong> {{ theme.userId.username }}</p>
@@ -35,7 +34,7 @@
                                                 <span class="badge bg-design rounded-pill ms-auto">{{theme.subscribers.length || 0}}</span>
                                             </p>
                                         </div>
-                                        <!-- Conditional Image Source -->
+                                        <!-- Image Source -->
                                         <img [src]="i % 2 === 0 ? 'assets/images/topics/undraw_Remote_design_team_re_urdx.png' : 'assets/images/topics/undraw_online_ad_re_ol62.png'" class="custom-block-image img-fluid" alt="{{ theme.themeName }}">
                                     </a>
                                 </div>

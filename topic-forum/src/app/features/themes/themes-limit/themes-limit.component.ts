@@ -19,7 +19,7 @@ export class ThemesLimitComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.api.getThemes().subscribe({
       next: (themes) => {
-        this.themesLimitList = themes.slice( -3); // Takes only the last 3 themes
+        this.themesLimitList = themes.slice( -3); 
       },
       error: (err) => {
         this.errMessage = err.message || 'An error occurred while fetching themes.';

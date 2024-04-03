@@ -221,20 +221,20 @@ h3 {
 .editable input {
   background: transparent;
   border: none;
-  border-bottom: 2px solid #31344b; /* Underline style */
-  box-shadow: none; /* Removing box-shadow if any */
-  margin-top: 5px; /* Adding some spacing */
-  font-size: 1rem; /* Adjust to match your design */
-  color: #31344b; /* Text color */
-  width: calc(100% - 20px); /* Full width minus label and padding */
+  border-bottom: 2px solid #31344b; 
+  box-shadow: none; 
+  margin-top: 5px; 
+  font-size: 1rem; 
+  color: #31344b; 
+  width: calc(100% - 20px); 
 }
 
 .editable input:focus {
   outline: none;
-  border-bottom-color: #00bcd4; /* Highlight color when focused */
+  border-bottom-color: #00bcd4; 
 }
 
-/* Style for label if needed */
+/* Style for label */
 .editable label {
   font-weight: 600;
   margin-right: 10px;
@@ -261,7 +261,7 @@ h3 {
 .wrapper .about.editable {
   display: flex;
   align-items: center;
-  margin-bottom: 15px; /* Add space between rows */
+  margin-bottom: 15px; 
 }
 
 .wrapper .about.editable label {
@@ -271,16 +271,15 @@ h3 {
 }
 
 .wrapper .about.editable input {
-  flex: 1; /* Take up remaining space */
+  flex: 1; 
   padding: 8px;
-  border: 1px solid #ced4da; /* Example border, adjust as needed */
+  border: 1px solid #ced4da; 
   border-radius: 4px;
   line-height: 1.5;
   font-size: 16px;
-  margin-left: 10px; /* Ensure some space between the label and input */
+  margin-left: 10px; 
 }
 
-/* Adjust the focus styles for input fields */
 .wrapper .about.editable input:focus {
   outline: none;
   border-color: #80bdff;
@@ -289,35 +288,34 @@ h3 {
 
 /* Style for inputs in normal state */
 .wrapper .about.editable input {
-  background: #f3f4f6; /* Light grey background */
-  border: 1px solid #ced4da; /* Example border, adjust as needed */
+  background: #f3f4f6; 
+  border: 1px solid #ced4da; 
   border-radius: 4px;
   line-height: 1.5;
   font-size: 16px;
   padding: 8px;
-  margin-left: 10px; /* Ensure some space between the label and input */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  margin-left: 10px; 
+  transition: background-color 0.3s ease; 
 }
 
 /* Style for inputs when focused */
 .wrapper .about.editable input:focus {
   outline: none;
   border-color: #80bdff;
-  background: #ffffff; /* Whiter background when focused */
+  background: #ffffff; 
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
 
   /* errors  */
-
-  p.error {
-    border-radius: 0.3em;
-    color: red;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 20px;
-    }
-    
-    .input-error {
-    border-left-color: red;
-    }
+p.error {
+  border-radius: 0.3em;
+  color: red;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  }
+  
+  .input-error {
+  border-left-color: red;
+  }
