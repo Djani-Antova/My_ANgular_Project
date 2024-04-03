@@ -1,57 +1,59 @@
 <section class="topics-detail-section section-padding" id="topics-detail">
-    <div class="col-12 text-center">
-      <h2 class="mb-4">Check out comments</h2>
-    </div>
-    <div class="container">
-      <div class="row">
+  <div class="col-12 text-center">
+    <h2 class="mb-4">Check out comments</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-12 m-auto">
+        <!-- Theme Title & Creation Date -->
+        <h3 class="mb-4">{{theme?.themeName}}</h3>
+        <p *ngIf="theme">Created: <time>{{ theme.created_at | elapsedTimeWithHours }} </time></p>
 
-        <div class="col-lg-8 col-12 m-auto">
-          <!-- Theme Title & Creation Date -->
-          <h3 class="mb-4">{{theme?.themeName}}</h3>
-          <p *ngIf="theme">Created: <time>{{ theme.created_at | elapsedTimeWithHours }} </time></p>
-  
-          <!-- Comments Section -->
-          <div *ngFor="let post of theme?.posts" class="comment-section">
-            <div class="comment-header">
-              <p>
-                <span>{{post.userId.username}}</span>
-                posted <time>{{post.created_at | elapsedTimeSoFar}}</time> ago
-              </p>
-            </div>
-            <div class="comment-body">
-              <i class="fa fa-user-circle avatar" aria-hidden="true"></i>
-              <p>{{post.text}} 
-                <i *ngIf="post.userId._id === userId" [routerLink]="['/post', 'edit', post._id]" class="fa fa-edit" style="font-size: 1.1em; color: #6495c8; margin-left: 7px;" tabindex="0"></i>
-              </p>
-
-
-            </div>
-            <div class="comment-footer">
-                <!-- Like Button -->
-              <i class="fa fa-heart" [style.color]="post.likes.includes(userId) ? 'grey' : '#6495c8'" (click)="likePost(post._id)" ></i>
-              <span>{{post.likes.length}} likes</span>
-              <!-- Edit and Delete Buttons for Post Owner -->
-              <!-- <i *ngIf="post.userId._id === userId" class="fa fa-edit" (click)="editPost(post._id)"></i> -->
-              <i *ngIf="post.userId._id === userId" class="fa fa-trash" style="margin-left: 7px;" (click)="deletePost(post._id)"></i>
-            </div>
+        <!-- Comments Section -->
+        <div *ngFor="let post of theme?.posts" class="comment-section">
+          <div class="comment-header">
+            <p>
+              <span>{{post.userId.username}}</span>
+              posted <time>{{post.created_at | elapsedTimeSoFar}}</time> ago
+            </p>
           </div>
-  
-          <!-- Post Comment Form -->
-          <form *ngIf="isLogged" #form="ngForm" (ngSubmit)="postComment(form)" class="user-comment-container">
-            <p class="mb-4">{{username}}, add your comment here:</p>
-            <div class="comment-section">
-              <textarea class="form-control comment-placeholder" placeholder="Add your comment here..." name="postText" [(ngModel)]="currentPostText" required></textarea>
-            </div>
-            <div class="submit-comment-button">
-              <button type="submit" class="btn btn-primary">Post Comment</button>
-            </div>
-            <!-- Display Error Message if Any -->
-            <p *ngIf="errMessage" class="text-danger">{{errMessage}}</p>
-          </form>
-  
+          <div class="comment-body">
+            <i class="fa fa-user-circle avatar" aria-hidden="true"></i>
+            <p>{{post.text}}
+              <i *ngIf="post.userId._id === userId" [routerLink]="['/post', 'edit', post._id]" class="fa fa-edit" style="font-size: 1.1em; color: #6495c8; margin-left: 7px;" tabindex="0"></i>
+            </p>
+          </div>
+          <div class="comment-footer">
+            <!-- Like Button -->
+            <span *ngIf="post.likes.includes(userId)" class="already-liked-text">Already liked</span>
+            <i class="fa fa-heart" [style.color]="post.likes.includes(userId) ? '#6495c8' : 'grey'" (click)="likePost(post._id)" *ngIf="!post.likes.includes(userId)"></i>
+            <i class="fa fa-heart" style="color: #6495c8;" *ngIf="post.likes.includes(userId)"></i>
+            <span>{{post.likes.length}} likes</span>
+            <!-- Edit and Delete Buttons for Post Owner -->
+            <i *ngIf="post.userId._id === userId" class="fa fa-trash" style="margin-left: 7px;" (click)="deletePost(post._id)"></i>
         </div>
         
+        </div>
+
+        <!-- Post Comment Form -->
+        <form *ngIf="isLogged" #form="ngForm" (ngSubmit)="postComment(form)" class="user-comment-container">
+          <p class="mb-4">{{username}}, add your comment here:</p>
+          <div class="comment-section">
+              <textarea class="form-control comment-placeholder" placeholder="Add your comment here..." name="postText" [(ngModel)]="currentPostText" required #inputPost="ngModel"></textarea>
+              <!-- Error Title Container -->
+              <ng-container *ngIf="inputPost.touched">
+                  <p class="error" *ngIf="inputPost.errors?.['required']">
+                      Comment field is required!
+                  </p>
+              </ng-container>
+          </div>
+          <div class="submit-comment-button">
+              <button type="submit" class="btn btn-primary">Post Comment</button>
+          </div>
+          <!-- Display Error Message if Any -->
+          <p *ngIf="errMessage" class="text-danger">{{errMessage}}</p>
+        </form>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
