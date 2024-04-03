@@ -1,3 +1,13 @@
 .mb-lg-0 {
     margin-bottom: 20px !important;
 }
+
+.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.subscribers-text {
+    margin-right: 5px; /* Adjust spacing as needed */
+}
+
