@@ -11,6 +11,12 @@
     transition: box-shadow 0.15s ease-in-out;  
     margin: 30px auto 50px;
   }
+
+  .col-lg-8.col-12.mt-3.mx-auto form {
+    margin-bottom: 90px !important;
+}
+
+
   .btn-primary :hover {
     background: #267c9b;
   }
@@ -21,3 +27,5 @@
   h3 {
     margin-top: 40px;
   }
+
+  
