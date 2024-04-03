@@ -115,3 +115,4 @@ If owner wants to delete ahis post, he got a warning
 ## Used additional libraries
 - moment js
 - bootstrap
+- fontawesome
