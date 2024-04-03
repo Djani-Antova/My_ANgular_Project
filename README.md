@@ -38,7 +38,6 @@ Public page for all users. All themes are rendered.
 ![All-themes View](topic-forum/src/assets/images/screenshots/all-themes.PNG "All-themes View")
 
 ### Login page
-
 The login form expects as input: email and password.
 There is a validation of email:
 Email address must have at least 9 symbols. The valid domain name - &quot;bg&quot; or &quot;com&quot;.
